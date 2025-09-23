@@ -3,27 +3,27 @@ import localFont from 'next/font/local'
 export const avenir = localFont({
 	src: [
 		{
-			path: '/fonts/Avenir/Avenir\u0020Light.ttf',
+			path: '../../../public/fonts/Avenir/Avenir_Light.ttf',
 			weight: '300',
 			style: 'normal',
 		},
 		{
-			path: '/fonts/Avenir/Avenir\u0020Book.ttf',
+			path: '../../../public/fonts/Avenir/Avenir_Book.ttf',
 			weight: '400',
 			style: 'normal',
 		},
 		{
-			path: '/fonts/Avenir/Avenir\u0020Regular.ttf',
+			path: '../../../public/fonts/Avenir/Avenir_Regular.ttf',
 			weight: '500',
 			style: 'normal',
 		},
 		{
-			path: '/fonts/Avenir/Avenir\u0020Heavy.ttf',
+			path: '../../../public/fonts/Avenir/Avenir_Heavy.ttf',
 			weight: '800',
 			style: 'normal',
 		},
 		{
-			path: '/fonts/Avenir/Avenir\u0020Black.ttf',
+			path: '../../../public/fonts/Avenir/Avenir_Black.ttf',
 			weight: '900',
 			style: 'normal',
 		},

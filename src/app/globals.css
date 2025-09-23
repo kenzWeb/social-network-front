@@ -47,6 +47,7 @@
 	--radius: 0.625rem;
 	--background: #282828;
 	--foreground: #1a1a1a;
+	--auth-bg: linear-gradient(to top right, #666666 1%, #000000 100%);
 	--card: var(--background);
 	--card-foreground: var(--foreground);
 	--popover: var(--background);
@@ -118,5 +119,11 @@
 	}
 	body {
 		@apply bg-background text-foreground;
+	}
+}
+
+@layer utilities {
+	.bg-auth {
+		background: var(--auth-bg);
 	}
 }
