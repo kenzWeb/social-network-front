@@ -1,5 +1,14 @@
-export default function AuthLayout() {
-	return <div className='h-screen bg-auth'>
-		
-	</div>
+import {LayoutProps} from '@/shared/interfaces/interface.root'
+import AuthHeader from '@/widgets/AuthHeader/ui/AuthHeader'
+import RootContainer from '@/widgets/RootContainer/ui/RootContainer'
+
+export default function AuthLayout({children}: LayoutProps) {
+	return (
+		<div className='h-screen bg-auth'>
+			<RootContainer>
+				<AuthHeader />
+				{children}
+			</RootContainer>
+		</div>
+	)
 }
