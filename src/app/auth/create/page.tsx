@@ -1,3 +1,4 @@
+import AuthWrapper from '@/widgets/AuthWrapper/ui/AuthWrapper'
 import type {Metadata} from 'next'
 
 export const metadata: Metadata = {
@@ -6,5 +7,5 @@ export const metadata: Metadata = {
 }
 
 export default function CreateAccountPage() {
-	return <div>test</div>
+	return <AuthWrapper>Create Account Page</AuthWrapper>
 }
