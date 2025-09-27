@@ -1,3 +1,3 @@
-export default function RegisterForm() {
+export function RegisterForm() {
 	return <div>Enter</div>
 }

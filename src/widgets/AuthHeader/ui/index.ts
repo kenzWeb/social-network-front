@@ -1,1 +1,1 @@
-export * from './AuthHeader'
+export {AuthHeader} from './AuthHeader'

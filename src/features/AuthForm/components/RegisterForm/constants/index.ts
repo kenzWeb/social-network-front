@@ -1,1 +1,0 @@
-export const HEADING_AUTH_FORM = 'WELCOME BACK'

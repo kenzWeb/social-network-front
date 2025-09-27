@@ -1,5 +1,7 @@
-import {HEADING_AUTH_FORM} from '@/features/AuthForm/components/RegisterForm/constants'
-import AuthWrapper from '@/widgets/AuthWrapper/ui/AuthWrapper'
+import {LoginForm} from '@/features/AuthForm/components'
+import {HEADING_AUTH_FORM} from '@/shared/constants/base.constants'
+import {AuthWrapper} from '@/widgets/AuthWrapper'
+
 import type {Metadata} from 'next'
 
 export const metadata: Metadata = {
@@ -9,6 +11,8 @@ export const metadata: Metadata = {
 
 export default function CreateAccountPage() {
 	return (
-		<AuthWrapper heading={HEADING_AUTH_FORM}>Create Account Page</AuthWrapper>
+		<AuthWrapper heading={HEADING_AUTH_FORM}>
+			<LoginForm />
+		</AuthWrapper>
 	)
 }

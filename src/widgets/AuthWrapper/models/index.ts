@@ -1,0 +1,1 @@
+export const COPYRIGHT = 'Copyright @ 2025 Banish'

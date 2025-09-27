@@ -1,3 +1,3 @@
-export default function LoginForm() {
+export function LoginForm() {
 	return <div>Enter</div>
 }
