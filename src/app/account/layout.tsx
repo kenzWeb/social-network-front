@@ -1,6 +1,6 @@
 import {LayoutProps} from '@/shared/interfaces/interface.root'
-import AuthHeader from '@/widgets/AuthHeader/ui/AuthHeader'
-import RootContainer from '@/widgets/RootContainer/ui/RootContainer'
+import {AuthHeader} from '@/widgets/AuthHeader'
+import {RootContainer} from '@/widgets/RootContainer'
 
 export default function AuthLayout({children}: LayoutProps) {
 	return (

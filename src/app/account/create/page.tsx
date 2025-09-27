@@ -1,6 +1,4 @@
-import {LoginForm} from '@/features/AuthForm/components'
-import {HEADING_AUTH_FORM} from '@/shared/constants/base.constants'
-import {AuthWrapper} from '@/widgets/AuthWrapper'
+import {LoginForm} from '@/features/AuthForm/components/LoginForm'
 
 import type {Metadata} from 'next'
 
@@ -10,9 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function CreateAccountPage() {
-	return (
-		<AuthWrapper heading={HEADING_AUTH_FORM}>
-			<LoginForm />
-		</AuthWrapper>
-	)
+	return <LoginForm />
 }

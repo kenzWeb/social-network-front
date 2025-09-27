@@ -1,5 +1,7 @@
 .wrapper {
 	padding: 0 30px;
+	display: flex;
+	
 }
 
 .heading {
@@ -8,4 +10,11 @@
 	margin-bottom: 60px;
 	text-align: center;
 	font-weight: 900;
+}
+
+.copyright {
+	font-weight: 200;
+	font-size: 14px;
+	color: white;
+	text-align: center;
 }
