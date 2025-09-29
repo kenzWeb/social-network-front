@@ -9,23 +9,24 @@ const buttonVariants = cva(
 	{
 		variants: {
 			variant: {
-				default: 'bg-primary text-primary-foreground hover:bg-primary/90',
+				default:
+					'bg-primary text-primary-foreground hover:bg-primary/90 cursor-pointer',
 				destructive:
-					'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60',
+					'bg-destructive text-white hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60 cursor-pointer',
 				outline:
 					'border bg-background shadow-xs hover:bg-accent hover:text-accent-foreground dark:bg-input/30 dark:border-input dark:hover:bg-input/50',
 				secondary:
-					'bg-secondary text-secondary-foreground hover:bg-secondary/80',
+					'bg-secondary text-secondary-foreground hover:bg-secondary/80 cursor-pointer',
 				ghost:
-					'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50',
-				link: 'text-primary underline-offset-4 hover:underline',
-				black: 'text-white bg-black hover:bg-primary',
-				gray: 'text-white bg-black/80 hover:bg-primary-foreground',
-				yellow: 'text-black/87 bg-primary hover:bg-yellow-300',
+					'hover:bg-accent hover:text-accent-foreground dark:hover:bg-accent/50 cursor-pointer',
+				link: 'text-primary underline-offset-4 hover:underline cursor-pointer',
+				black: 'text-white bg-black hover:bg-foreground cursor-pointer',
+				gray: 'text-white bg-black/80 hover:bg-black cursor-pointer',
+				yellow: 'text-black/87 bg-primary hover:bg-yellow-300 cursor-pointer',
 			},
 			size: {
 				default: 'px-[25px] py-[8px] text-[16px]',
-				large: 'w-full px-[10px] text-[32px]',
+				large: 'w-full px-[10px] py-[5px] text-[32px]',
 				medium: 'px-[90px] py-[12px] text-[16px]',
 				small: 'px-[33px] py-[1px] text-[7px]',
 			},

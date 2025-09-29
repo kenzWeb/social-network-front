@@ -32,7 +32,7 @@ export function RegisterForm() {
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)}>
 					<RegisterFields form={form} />
-					<AuthButtons />
+					<AuthButtons first='Sign Up' last='Sign Up with Google' />
 				</form>
 			</Form>
 		</AuthWrapper>

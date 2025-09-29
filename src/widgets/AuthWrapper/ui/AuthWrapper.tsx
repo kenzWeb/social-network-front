@@ -12,9 +12,10 @@ export function AuthWrapper({children, heading}: AuthWrapperProps) {
 				<h2 className={styles.copyright}>{COPYRIGHT}</h2>
 			</div>
 
-			<div>
+			<div className={styles.image}>
 				<Image
-					src='/images/auth-image.png'
+					className={styles.img}
+					src='/images/register-page.jpg'
 					alt='People collaborating'
 					width={700}
 					height={500}
