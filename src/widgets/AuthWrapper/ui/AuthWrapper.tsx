@@ -6,7 +6,7 @@ import styles from './AuthWrapper.module.css'
 export function AuthWrapper({children, heading}: AuthWrapperProps) {
 	return (
 		<section className={styles.wrapper}>
-			<div>
+			<div className={styles.content}>
 				<h1 className={styles.heading}>{heading}</h1>
 				{children}
 				<h2 className={styles.copyright}>{COPYRIGHT}</h2>

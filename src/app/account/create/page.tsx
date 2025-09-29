@@ -1,4 +1,4 @@
-import {LoginForm} from '@/features/AuthForm/components/LoginForm'
+import {RegisterForm} from '@/features/AuthForm/components/RegisterForm'
 
 import type {Metadata} from 'next'
 
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 }
 
 export default function CreateAccountPage() {
-	return <LoginForm />
+	return <RegisterForm />
 }
