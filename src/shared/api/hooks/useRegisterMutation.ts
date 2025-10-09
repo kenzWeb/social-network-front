@@ -2,9 +2,11 @@ import {
 	registerSchema,
 	type RegisterFormValues,
 } from '@/features/AuthForm/components/RegisterForm/models'
+import {IApiError} from '@/shared/interfaces/interface.api'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
 import {useForm} from 'react-hook-form'
+import {toast} from 'react-toastify'
 import {register} from '../requests'
 
 export const useRegisterMutation = (
@@ -29,12 +31,16 @@ export const useRegisterMutation = (
 		mutationKey: ['register'],
 		mutationFn: (data: RegisterFormValues) => register(data),
 		...options,
-		onSuccess: (...args) => {
+		onSuccess: () => {
 			form.reset()
-			options?.onSuccess?.(...args)
+			toast.success(
+				'Registration successful! Please check your email to verify your account.',
+			)
 		},
-		onError: (...args) => {
-			options?.onError?.(...args)
+		onError: (err: IApiError) => {
+			toast.error(
+				err.response?.data.error || 'Registration failed. Please try again.',
+			)
 		},
 	})
 

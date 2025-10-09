@@ -1,0 +1,26 @@
+.fields {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	margin-bottom: 12px;
+}
+
+.label {
+	font-size: 32px;
+	margin-bottom: 0;
+	font-weight: 200;
+	color: white;
+	line-height: auto;
+}
+
+.input {
+	padding: 32px 12px;
+	border-radius: 3px;
+	font-size: 32px;
+	border-width: 2px;
+}
+
+.message {
+	font-size: 24px;
+	margin-top: 0px;
+}
