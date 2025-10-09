@@ -17,4 +17,4 @@ export const registerSchema = z.object({
 		.min(2, {message: 'Last name must be at least 2 characters'}),
 })
 
-export type RegisterFormValue = z.infer<typeof registerSchema>
+export type RegisterFormValues = z.infer<typeof registerSchema>
