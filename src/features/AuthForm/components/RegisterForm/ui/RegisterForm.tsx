@@ -3,28 +3,14 @@
 import {Form} from '@/shared/components/ui/Form'
 import {HEADING_REGISTER_FORM} from '@/shared/constants/base.constants'
 import {AuthWrapper} from '@/widgets/AuthWrapper'
-import {zodResolver} from '@hookform/resolvers/zod'
 
 import {AuthButtons} from '@/entities/AuthButtons/ui'
 import {RegisterFields} from '@/entities/AuthFields/components/RegisterFields/ui'
 import {useRegisterMutation} from '@/shared/api/hooks'
-import {useForm} from 'react-hook-form'
-import {RegisterFormValues, registerSchema} from '../models'
+import {RegisterFormValues} from '../models'
 
 export function RegisterForm() {
-	const {mutate, isPending} = useRegisterMutation()
-
-	const form = useForm<RegisterFormValues>({
-		resolver: zodResolver(registerSchema),
-		defaultValues: {
-			username: '',
-			email: '',
-			password: '',
-			first_name: '',
-			last_name: '',
-		},
-		mode: 'onBlur',
-	})
+	const {mutate, isPending, form} = useRegisterMutation()
 
 	const onSubmit = (values: RegisterFormValues) => {
 		mutate(values)
