@@ -16,9 +16,9 @@ export function AuthWrapper({children, heading}: AuthWrapperProps) {
 				<Image
 					className={styles.img}
 					src='/images/register-page.jpg'
-					alt='People collaborating'
-					width={700}
-					height={500}
+					alt='Promotional model with neon glasses'
+					fill
+					priority
 				/>
 			</div>
 		</section>

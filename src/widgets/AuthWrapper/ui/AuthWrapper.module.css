@@ -1,12 +1,20 @@
 .wrapper {
-	padding: 0 30px;
-	display: flex;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 24px;
+	padding: 24px;
+	max-width: 1280px;
+	margin: 0 auto;
+	overflow: hidden;
 }
 
 .content {
-	margin: auto;
-	max-width: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 560px;
 	width: 100%;
+	margin: 0;
 }
 
 .heading {
@@ -27,10 +35,27 @@
 }
 
 .image {
-	position: absolute;
-	right: 0;
+	position: relative;
+	border-radius: 16px;
+	overflow: hidden;
+	height: 100%;
 }
 
 .img {
+	object-fit: cover;
+	object-position: 60% 20%;
+}
 
+@media (max-width: 1024px) {
+	.wrapper {
+		grid-template-columns: 1fr;
+		padding: 16px;
+		gap: 16px;
+	}
+	.image {
+		display: none;
+	}
+	.content {
+		max-width: 420px;
+	}
 }
