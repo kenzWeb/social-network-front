@@ -10,7 +10,7 @@ import {FieldsLabels, FieldsPlaceholders} from '../constants'
 import {RegisterFieldsProps} from '../types'
 import styles from './RegisterFields.module.css'
 
-export const RegisterFields = ({form}: RegisterFieldsProps) => {
+export const RegisterFields = ({form, isPending}: RegisterFieldsProps) => {
 	return (
 		<div className={styles.fields}>
 			<FormField
@@ -25,6 +25,7 @@ export const RegisterFields = ({form}: RegisterFieldsProps) => {
 							<Input
 								className={styles.input}
 								placeholder={FieldsPlaceholders.username}
+								disabled={isPending}
 								{...field}
 							/>
 						</FormControl>
@@ -43,6 +44,7 @@ export const RegisterFields = ({form}: RegisterFieldsProps) => {
 							<Input
 								className={styles.input}
 								placeholder={FieldsPlaceholders.email}
+								disabled={isPending}
 								{...field}
 							/>
 						</FormControl>
@@ -56,11 +58,14 @@ export const RegisterFields = ({form}: RegisterFieldsProps) => {
 				name='password'
 				render={({field}) => (
 					<FormItem>
-						<FormLabel className={styles.label}>{FieldsLabels.password}</FormLabel>
+						<FormLabel className={styles.label}>
+							{FieldsLabels.password}
+						</FormLabel>
 						<FormControl>
 							<Input
 								className={styles.input}
 								placeholder={FieldsPlaceholders.password}
+								disabled={isPending}
 								{...field}
 							/>
 						</FormControl>
@@ -80,6 +85,7 @@ export const RegisterFields = ({form}: RegisterFieldsProps) => {
 							<Input
 								className={styles.input}
 								placeholder={FieldsPlaceholders.first_name}
+								disabled={isPending}
 								{...field}
 							/>
 						</FormControl>
@@ -100,6 +106,7 @@ export const RegisterFields = ({form}: RegisterFieldsProps) => {
 							<Input
 								className={styles.input}
 								placeholder={FieldsPlaceholders.last_name}
+								disabled={isPending}
 								{...field}
 							/>
 						</FormControl>

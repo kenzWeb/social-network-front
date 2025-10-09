@@ -7,11 +7,14 @@ import {zodResolver} from '@hookform/resolvers/zod'
 
 import {AuthButtons} from '@/entities/AuthButtons/ui'
 import {RegisterFields} from '@/entities/AuthFields/components/RegisterFields/ui'
+import {useRegisterMutation} from '@/shared/api/hooks'
 import {useForm} from 'react-hook-form'
-import {RegisterFormValue, registerSchema} from '../models'
+import {RegisterFormValues, registerSchema} from '../models'
 
 export function RegisterForm() {
-	const form = useForm<RegisterFormValue>({
+	const {mutate, isPending} = useRegisterMutation()
+
+	const form = useForm<RegisterFormValues>({
 		resolver: zodResolver(registerSchema),
 		defaultValues: {
 			username: '',
@@ -23,16 +26,20 @@ export function RegisterForm() {
 		mode: 'onBlur',
 	})
 
-	const onSubmit = (values: RegisterFormValue) => {
-		console.log(values)
+	const onSubmit = (values: RegisterFormValues) => {
+		mutate(values)
 	}
 
 	return (
 		<AuthWrapper heading={HEADING_REGISTER_FORM}>
 			<Form {...form}>
 				<form onSubmit={form.handleSubmit(onSubmit)}>
-					<RegisterFields form={form} />
-					<AuthButtons first='Sign Up' last='Sign Up with Google' />
+					<RegisterFields form={form} isPending={isPending} />
+					<AuthButtons
+						first='Sign Up'
+						last='Sign Up with Google'
+						isPending={isPending}
+					/>
 				</form>
 			</Form>
 		</AuthWrapper>
