@@ -28,6 +28,7 @@ export function RegisterForm() {
 					/>
 				</form>
 			</Form>
+			
 		</AuthWrapper>
 	)
 }
