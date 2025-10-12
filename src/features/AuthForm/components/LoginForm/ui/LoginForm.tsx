@@ -4,8 +4,9 @@ import {AuthWrapper} from '@/entities/AuthWrapper'
 import {Form} from '@/shared/components/ui/Form'
 import {HEADING_REGISTER_FORM} from '@/shared/constants/base.constants'
 
-import {AuthButtons} from '@/entities/AuthButtons/ui'
-import {LoginFields} from '@/entities/AuthFields/components/LoginFields/ui'
+import {AuthButtons} from '@/entities/AuthButtons/'
+
+import {LoginFields} from '@/entities/AuthFields/components/LoginFields'
 import {useLoginMutation} from '@/shared/api/hooks/useLoginMutation'
 import {LoginFormValues} from '../models'
 
