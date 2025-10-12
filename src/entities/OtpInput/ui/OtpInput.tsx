@@ -4,11 +4,23 @@ import {
 	InputOTPSeparator,
 	InputOTPSlot,
 } from '@/shared/components/ui/InputOtp'
+import {OtpInputProps} from '../types'
 import styles from './OtpInput.module.css'
 
-export const OtpInput = () => {
+export const OtpInput = ({
+	value,
+	onChange,
+	onComplete,
+	maxLength = 6,
+}: OtpInputProps) => {
 	return (
-		<InputOTP className={styles.otpInput} maxLength={6}>
+		<InputOTP
+			className={styles.otpInput}
+			maxLength={maxLength}
+			value={value}
+			onChange={onChange}
+			onComplete={onComplete}
+		>
 			<InputOTPGroup>
 				<InputOTPSlot index={0} />
 				<InputOTPSlot index={1} />
