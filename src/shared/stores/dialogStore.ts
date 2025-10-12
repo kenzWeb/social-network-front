@@ -1,26 +1,15 @@
-import {createStore} from 'zustand/vanilla'
+import {create} from 'zustand'
 
 export type DialogState = {
 	isOpen: boolean
-}
-
-export type DialogAction = {
 	open: () => void
 	close: () => void
 	toggle: () => void
 }
 
-export type DialogStore = DialogState & DialogAction
-
-export const initState: DialogState = {
+export const useDialogStore = create<DialogState>((set) => ({
 	isOpen: false,
-}
-
-export const createDialogStore = (initialState: DialogState = initState) => {
-	return createStore<DialogStore>((set) => ({
-		...initialState,
-		open: () => set(() => ({isOpen: true})),
-		close: () => set(() => ({isOpen: false})),
-		toggle: () => set((state) => ({isOpen: !state.isOpen})),
-	}))
-}
+	open: () => set(() => ({isOpen: true})),
+	close: () => set(() => ({isOpen: false})),
+	toggle: () => set((state) => ({isOpen: !state.isOpen})),
+}))

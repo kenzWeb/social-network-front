@@ -13,14 +13,13 @@ import styles from './OtpDialog.module.css'
 
 export const OtpDialog = () => {
 	const [code, setCode] = useState('')
-	const [open, setOpen] = useState(false)
 
 	const handleComplete = (val: string) => {
 		console.log('OTP complete:', val)
 	}
 
 	return (
-		<Dialog open={open}>
+		<Dialog>
 			<DialogTrigger>Open</DialogTrigger>
 			<DialogContent className={styles.dialogContent}>
 				<DialogHeader>

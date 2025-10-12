@@ -3,6 +3,7 @@ import {
 	type RegisterFormValues,
 } from '@/features/AuthForm/components/RegisterForm/models'
 import {IApiError} from '@/shared/interfaces/interface.api'
+import {useDialogStore} from '@/shared/stores/dialogStore'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
 import {useForm} from 'react-hook-form'
@@ -15,6 +16,8 @@ export const useRegisterMutation = (
 		'mutationKey' | 'mutationFn'
 	>,
 ) => {
+	const {open} = useDialogStore()
+
 	const form = useForm<RegisterFormValues>({
 		resolver: zodResolver(registerSchema),
 		defaultValues: {
@@ -36,6 +39,7 @@ export const useRegisterMutation = (
 			toast.success(
 				'Registration successful! Please check your email to verify your account.',
 			)
+			open()
 		},
 		onError: (err: IApiError) => {
 			toast.error(
