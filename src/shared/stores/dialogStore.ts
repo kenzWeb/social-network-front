@@ -5,6 +5,14 @@ export type DialogState = {
 	open: () => void
 	close: () => void
 	toggle: () => void
+
+	otpCode: string
+	otpMaxLength: number
+
+	setOtpCode: (value: string) => void
+	setOtpMaxLength: (len: number) => void
+	onOtpComplete?: (value: string) => void
+	setOnOtpComplete: (fn?: (value: string) => void) => void
 }
 
 export const useDialogStore = create<DialogState>((set) => ({
@@ -12,4 +20,12 @@ export const useDialogStore = create<DialogState>((set) => ({
 	open: () => set(() => ({isOpen: true})),
 	close: () => set(() => ({isOpen: false})),
 	toggle: () => set((state) => ({isOpen: !state.isOpen})),
+
+	otpCode: '',
+	otpMaxLength: 6,
+
+	setOtpCode: (value) => set(() => ({otpCode: value})),
+	setOtpMaxLength: (len) => set(() => ({otpMaxLength: len})),
+	onOtpComplete: undefined,
+	setOnOtpComplete: (fn) => set(() => ({onOtpComplete: fn})),
 }))

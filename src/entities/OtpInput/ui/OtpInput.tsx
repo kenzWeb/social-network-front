@@ -4,6 +4,7 @@ import {
 	InputOTPSeparator,
 	InputOTPSlot,
 } from '@/shared/components/ui/InputOtp'
+import {useOtpStore} from '@/shared/hooks/'
 import {OtpInputProps} from '../types'
 import styles from './OtpInput.module.css'
 
@@ -13,13 +14,20 @@ export const OtpInput = ({
 	onComplete,
 	maxLength = 6,
 }: OtpInputProps) => {
+	const {otpCode, otpMaxLength, setOtpCode, onOtpComplete} = useOtpStore()
+
+	const resolvedValue = value ?? otpCode
+	const resolvedMaxLength = maxLength ?? otpMaxLength
+	const handleChange = onChange ?? setOtpCode
+	const handleComplete = onComplete ?? onOtpComplete
+
 	return (
 		<InputOTP
 			className={styles.otpInput}
-			maxLength={maxLength}
-			value={value}
-			onChange={onChange}
-			onComplete={onComplete}
+			maxLength={resolvedMaxLength}
+			value={resolvedValue}
+			onChange={handleChange}
+			onComplete={handleComplete}
 		>
 			<InputOTPGroup>
 				<InputOTPSlot index={0} />

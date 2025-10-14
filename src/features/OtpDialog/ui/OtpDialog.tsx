@@ -4,23 +4,29 @@ import {
 	DialogDescription,
 	DialogHeader,
 	DialogTitle,
-	DialogTrigger,
 } from '@/shared/components/ui/Dialog'
-import {useState} from 'react'
+import {useEffect} from 'react'
 
 import {OtpInput} from '@/entities/OtpInput/'
+import {Button} from '@/shared/components/ui/Button'
+import {useOtpStore} from '@/shared/hooks/'
 import styles from './OtpDialog.module.css'
 
 export const OtpDialog = () => {
-	const [code, setCode] = useState('')
+	const {setOnOtpComplete, isOpen, otpCode, otpMaxLength, onOtpComplete} =
+		useOtpStore()
 
-	const handleComplete = (val: string) => {
-		console.log('OTP complete:', val)
-	}
+	useEffect(() => {
+		setOnOtpComplete?.((val) => {
+			console.log('OTP complete:', val)
+		})
+		return () => setOnOtpComplete?.(undefined)
+	}, [setOnOtpComplete])
+
+	const isVerifyDisabled = (otpCode?.length || 0) < (otpMaxLength || 0)
 
 	return (
-		<Dialog>
-			<DialogTrigger>Open</DialogTrigger>
+		<Dialog open={isOpen}>
 			<DialogContent className={styles.dialogContent}>
 				<DialogHeader>
 					<DialogTitle className={styles.title}>Enter the code</DialogTitle>
@@ -29,11 +35,16 @@ export const OtpDialog = () => {
 					</h2>
 					<DialogDescription asChild className={styles.description}>
 						<div>
-							<OtpInput
-								value={code}
-								onChange={setCode}
-								onComplete={handleComplete}
-							/>
+							<OtpInput />
+							<Button
+								disabled={isVerifyDisabled}
+								className={styles.button}
+								variant='yellow'
+								size='default'
+								onClick={() => onOtpComplete?.(otpCode)}
+							>
+								Verify
+							</Button>
 						</div>
 					</DialogDescription>
 				</DialogHeader>
