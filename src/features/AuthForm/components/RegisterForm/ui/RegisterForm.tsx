@@ -9,19 +9,15 @@ import {AuthButtons} from '@/entities/AuthButtons'
 import {RegisterFields} from '@/entities/AuthFields/components/RegisterFields'
 import {OtpDialog} from '@/features/OtpDialog'
 import {useRegisterMutation} from '@/shared/api/hooks'
-import {RegisterFormValues} from '../models'
+import {onSubmit} from '@/shared/functions/onSubmit'
 
 export function RegisterForm() {
 	const {mutate, isPending, form} = useRegisterMutation()
 
-	const onSubmit = (values: RegisterFormValues) => {
-		mutate(values)
-	}
-
 	return (
 		<AuthWrapper heading={HEADING_REGISTER_FORM}>
 			<Form {...form}>
-				<form onSubmit={form.handleSubmit(onSubmit)}>
+				<form onSubmit={form.handleSubmit(onSubmit(mutate, form.getValues()))}>
 					<RegisterFields form={form} isPending={isPending} />
 					<AuthButtons
 						first='Sign Up'

@@ -1,4 +1,4 @@
-import {RegisterFormValues} from '@/features/AuthForm/components/RegisterForm/models'
+import {RegisterFormValues} from '@/shared/models'
 import {UseFormReturn} from 'react-hook-form'
 
 export interface RegisterFieldsProps {

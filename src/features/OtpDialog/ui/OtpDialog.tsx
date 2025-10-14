@@ -5,9 +5,9 @@ import {
 	DialogHeader,
 	DialogTitle,
 } from '@/shared/components/ui/Dialog'
-import {useEffect} from 'react'
 
 import {OtpInput} from '@/entities/OtpInput/'
+import {useOtpMutation} from '@/shared/api/hooks/useOtpMutation'
 import {Button} from '@/shared/components/ui/Button'
 import {useOtpStore} from '@/shared/hooks/'
 import styles from './OtpDialog.module.css'
@@ -16,12 +16,7 @@ export const OtpDialog = () => {
 	const {setOnOtpComplete, isOpen, otpCode, otpMaxLength, onOtpComplete} =
 		useOtpStore()
 
-	useEffect(() => {
-		setOnOtpComplete?.((val) => {
-			console.log('OTP complete:', val)
-		})
-		return () => setOnOtpComplete?.(undefined)
-	}, [setOnOtpComplete])
+	const {mutate, isPending} = useOtpMutation()
 
 	const isVerifyDisabled = (otpCode?.length || 0) < (otpMaxLength || 0)
 
@@ -41,7 +36,7 @@ export const OtpDialog = () => {
 								className={styles.button}
 								variant='yellow'
 								size='default'
-								onClick={() => onOtpComplete?.(otpCode)}
+								// onClick={mutate(otpCode)}
 							>
 								Verify
 							</Button>

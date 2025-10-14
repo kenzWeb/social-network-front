@@ -4,3 +4,4 @@ export interface OtpInputProps {
 	onComplete?: (value: string) => void
 	maxLength?: number
 }
+

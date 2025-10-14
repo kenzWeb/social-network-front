@@ -1,14 +1,12 @@
-import {
-	registerSchema,
-	type RegisterFormValues,
-} from '@/features/AuthForm/components/RegisterForm/models'
 import {IApiError} from '@/shared/interfaces/interface.api'
+
 import {useDialogStore} from '@/shared/stores/dialogStore'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
 import {useForm} from 'react-hook-form'
 import {toast} from 'react-toastify'
 import {register} from '../requests'
+import { RegisterFormValues, registerSchema } from '@/features/AuthForm/components/RegisterForm/models'
 
 export const useRegisterMutation = (
 	options?: Omit<

@@ -1,13 +1,11 @@
-import {
-	LoginFormValues,
-	loginSchema,
-} from '@/features/AuthForm/components/LoginForm/models'
 import {IApiError} from '@/shared/interfaces/interface.api'
+
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
 import {useForm} from 'react-hook-form'
 import {toast} from 'react-toastify'
 import {login} from '../requests'
+import { LoginFormValues, loginSchema } from '@/features/AuthForm/components/LoginForm/models'
 
 export const useLoginMutation = (
 	options?: Omit<

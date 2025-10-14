@@ -1,4 +1,4 @@
-import {LoginFormValues} from '@/features/AuthForm/components/LoginForm/models'
+import {LoginFormValues} from '@/shared/models'
 import {UseFormReturn} from 'react-hook-form'
 
 export interface LoginFieldsProps {

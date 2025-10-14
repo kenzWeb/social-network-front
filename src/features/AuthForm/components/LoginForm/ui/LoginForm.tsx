@@ -8,19 +8,15 @@ import {AuthButtons} from '@/entities/AuthButtons/'
 
 import {LoginFields} from '@/entities/AuthFields/components/LoginFields'
 import {useLoginMutation} from '@/shared/api/hooks/useLoginMutation'
-import {LoginFormValues} from '../models'
+import {onSubmit} from '@/shared/functions/onSubmit'
 
 export function LoginForm() {
 	const {mutate, isPending, form} = useLoginMutation()
 
-	const onSubmit = (values: LoginFormValues) => {
-		mutate(values)
-	}
-
 	return (
 		<AuthWrapper heading={HEADING_REGISTER_FORM}>
 			<Form {...form}>
-				<form onSubmit={form.handleSubmit(onSubmit)}>
+				<form onSubmit={form.handleSubmit(onSubmit(mutate, form.getValues()))}>
 					<LoginFields form={form} isPending={isPending} />
 					<AuthButtons
 						first='Sign In'
