@@ -40,8 +40,6 @@ instance.interceptors.response.use(
 					errorCatch(error) === 'Missing refresh token' ||
 					errorCatch(error) === 'Invalid refresh token'
 				) {
-					localStorage.removeItem('accessToken')
-					localStorage.removeItem('refreshToken')
 					removeToken()
 				}
 			}
