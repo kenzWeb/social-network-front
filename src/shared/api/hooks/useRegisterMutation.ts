@@ -1,22 +1,23 @@
 import {IApiError} from '@/shared/interfaces/interface.api'
 
+import {registerSchema} from '@/features/AuthForm/components/RegisterForm/models'
 import {useDialogStore} from '@/shared/stores/dialogStore'
+import {RegisterRequest} from '@/shared/types/api'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
 import {useForm} from 'react-hook-form'
 import {toast} from 'react-toastify'
 import {register} from '../requests'
-import { RegisterFormValues, registerSchema } from '@/features/AuthForm/components/RegisterForm/models'
 
 export const useRegisterMutation = (
 	options?: Omit<
-		UseMutationOptions<void, unknown, RegisterFormValues>,
+		UseMutationOptions<void, unknown, RegisterRequest>,
 		'mutationKey' | 'mutationFn'
 	>,
 ) => {
 	const {open} = useDialogStore()
 
-	const form = useForm<RegisterFormValues>({
+	const form = useForm<RegisterRequest>({
 		resolver: zodResolver(registerSchema),
 		defaultValues: {
 			username: '',
@@ -24,13 +25,13 @@ export const useRegisterMutation = (
 			password: '',
 			first_name: '',
 			last_name: '',
-		},
+		} as RegisterRequest,
 		mode: 'onBlur',
 	})
 
 	const mutation = useMutation({
 		mutationKey: ['register'],
-		mutationFn: (data: RegisterFormValues) => register(data),
+		mutationFn: (data: RegisterRequest) => register(data),
 		...options,
 		onSuccess: () => {
 			form.reset()

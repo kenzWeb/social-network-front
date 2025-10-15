@@ -1,22 +1,19 @@
+import * as dotenv from 'dotenv'
 import {defineConfig} from 'orval'
+
+dotenv.config()
 
 export default defineConfig({
 	client: {
 		input: {
 			target: '../backend/openapi.json',
 			validation: false,
+			parserOptions: {
+				validate: false
+			}
 		},
 		output: {
-			target: './src/shared/api/client.ts',
 			schemas: './src/shared/types/api',
-			client: 'react-query',
-			mode: 'tags-split',
-			override: {
-				mutator: {
-					path: './src/shared/api/mutator.ts',
-					name: 'customInstance',
-				},
-			},
 		},
 	},
 })

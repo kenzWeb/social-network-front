@@ -1,18 +1,19 @@
 import {IApiError} from '@/shared/interfaces/interface.api'
-import {OtpFormValues} from '@/shared/models'
+
+import {Register201, VerifyEmailRequest} from '@/shared/types/api'
 import {useMutation, UseMutationOptions} from '@tanstack/react-query'
 import {toast} from 'react-toastify'
 import {verifyEmail} from '../requests'
 
 export const useOtpMutation = (
 	options?: Omit<
-		UseMutationOptions<void, unknown, OtpFormValues>,
+		UseMutationOptions<Register201, unknown, VerifyEmailRequest>,
 		'mutationKey' | 'mutationFn'
 	>,
 ) => {
 	const mutation = useMutation({
 		mutationKey: ['otp'],
-		mutationFn: (data: OtpFormValues) => verifyEmail(data),
+		mutationFn: (data: VerifyEmailRequest) => verifyEmail(data),
 		...options,
 		onSuccess: () => {
 			toast.success(

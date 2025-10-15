@@ -1,14 +1,22 @@
 import {auth} from '@/shared/constants/path.constants'
 
+import type {
+	Login200OneOf,
+	LoginRequest,
+	Register201,
+	RegisterRequest,
+	Verify2FA200,
+	VerifyEmailRequest,
+} from '@/shared/types/api'
 import {api} from '../instance'
-import { LoginFormValues } from '@/features/AuthForm/components/LoginForm/models'
-import { RegisterFormValues } from '@/features/AuthForm/components/RegisterForm/models'
 
-export const register = async (data: RegisterFormValues) =>
-	await api.post(auth.register(), data).then((res) => res.data)
+export const register = async (data: RegisterRequest) =>
+	await api.post<Login200OneOf>(auth.register(), data).then((res) => res.data)
 
-export const login = async (data: LoginFormValues) =>
-	await api.post(auth.login(), data).then((res) => res.data)
+export const login = async (data: LoginRequest) =>
+	await api.post<Register201>(auth.login(), data).then((res) => res.data)
 
-export const verifyEmail = async (data: string) =>
-	await api.post(auth.verifyEmail(), {otp: data}).then((res) => res.data)
+export const verifyEmail = async (data: VerifyEmailRequest) =>
+	await api
+		.post<Verify2FA200>(auth.verifyEmail(), {otp: data})
+		.then((res) => res.data)

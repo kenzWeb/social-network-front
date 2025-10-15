@@ -1,19 +1,20 @@
 import {IApiError} from '@/shared/interfaces/interface.api'
 
+import {loginSchema} from '@/features/AuthForm/components/LoginForm/models'
+import {Login200OneOf, LoginRequest} from '@/shared/types/api'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
 import {useForm} from 'react-hook-form'
 import {toast} from 'react-toastify'
 import {login} from '../requests'
-import { LoginFormValues, loginSchema } from '@/features/AuthForm/components/LoginForm/models'
 
 export const useLoginMutation = (
 	options?: Omit<
-		UseMutationOptions<void, unknown, LoginFormValues>,
+		UseMutationOptions<Login200OneOf, unknown, LoginRequest>,
 		'mutationKey' | 'mutationFn'
 	>,
 ) => {
-	const form = useForm<LoginFormValues>({
+	const form = useForm<LoginRequest>({
 		resolver: zodResolver(loginSchema),
 		defaultValues: {
 			email: '',
@@ -24,7 +25,7 @@ export const useLoginMutation = (
 
 	const mutation = useMutation({
 		mutationKey: ['login'],
-		mutationFn: (data: LoginFormValues) => login(data),
+		mutationFn: (data: LoginRequest) => login(data),
 		...options,
 		onSuccess: () => {
 			form.reset()

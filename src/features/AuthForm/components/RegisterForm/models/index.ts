@@ -11,10 +11,12 @@ export const registerSchema = z.object({
 		.min(6, {message: 'Password must be at least 6 characters'}),
 	first_name: z
 		.string()
-		.min(2, {message: 'First name must be at least 2 characters'}),
+		.min(2, {message: 'First name must be at least 2 characters'})
+		.optional(),
 	last_name: z
 		.string()
-		.min(2, {message: 'Last name must be at least 2 characters'}),
+		.min(2, {message: 'Last name must be at least 2 characters'})
+		.optional(),
 })
 
 export type RegisterFormValues = z.infer<typeof registerSchema>
