@@ -7,5 +7,5 @@
  */
 
 export type RefreshToken200 = {
-  token?: string;
-};
+	token?: string
+}

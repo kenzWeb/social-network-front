@@ -3,6 +3,7 @@ import {auth} from '@/shared/constants/path.constants'
 import type {
 	Login200OneOf,
 	LoginRequest,
+	RefreshToken200,
 	Register201,
 	RegisterRequest,
 	Verify2FA200,
@@ -20,3 +21,6 @@ export const verifyEmail = async (data: VerifyEmailRequest) =>
 	await api
 		.post<Verify2FA200>(auth.verifyEmail(), {otp: data})
 		.then((res) => res.data)
+
+export const refresh = async () =>
+	await api.get<RefreshToken200>(auth.refresh()).then((res) => res.data)
