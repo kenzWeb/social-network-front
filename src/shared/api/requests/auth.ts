@@ -7,7 +7,7 @@ import type {
 	RefreshToken200,
 	Register201,
 	RegisterRequest,
-	Verify2FA200,
+	VerifyEmail200,
 	VerifyEmailRequest,
 } from '@/shared/types/api'
 import {api} from '../instance'
@@ -24,7 +24,7 @@ export const login = async (data: LoginRequest) =>
 
 export const verifyEmail = async (data: VerifyEmailRequest) =>
 	await api
-		.post<Verify2FA200>(auth.verifyEmail(), {otp: data})
+		.post<VerifyEmail200>(auth.verifyEmail(), data)
 		.then((res) => res.data)
 
 export const refresh = async () =>

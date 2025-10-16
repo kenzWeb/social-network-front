@@ -4,6 +4,7 @@ import {loginSchema} from '@/features/AuthForm/components/LoginForm/models'
 import {Login200OneOf, LoginRequest} from '@/shared/types/api'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
+import {useRouter} from 'next/navigation'
 import {useForm} from 'react-hook-form'
 import {toast} from 'react-toastify'
 import {login} from '../requests'
@@ -14,13 +15,15 @@ export const useLoginMutation = (
 		'mutationKey' | 'mutationFn'
 	>,
 ) => {
+	const route = useRouter()
+
 	const form = useForm<LoginRequest>({
 		resolver: zodResolver(loginSchema),
 		defaultValues: {
 			email: '',
 			password: '',
 		},
-		mode: 'onBlur',
+		mode: 'all',
 	})
 
 	const mutation = useMutation({
@@ -30,6 +33,7 @@ export const useLoginMutation = (
 		onSuccess: () => {
 			form.reset()
 			toast.success('Login successful! Welcome back.')
+			route.push('/dashboard')
 		},
 		onError: (err: IApiError) => {
 			toast.error(err.response?.data.error || 'Login failed. Please try again.')

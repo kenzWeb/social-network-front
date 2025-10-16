@@ -4,11 +4,11 @@ import {EnumTokens} from './shared/constants/api.constants'
 const protectedRoutes = ['/dashboard']
 
 const authRoutes = [
-	'/auth/login',
-	'/auth/register',
-	'/auth/verify-email',
-	'/auth/forgot-password',
-	'/auth/reset-password',
+	'/account/create',
+	'/account/login',
+	'/account/verify-email',
+	'/account/forgot-password',
+	'/account/reset-password',
 ]
 
 export default function middleware(request: NextRequest) {
@@ -22,7 +22,7 @@ export default function middleware(request: NextRequest) {
 	if (!isAuthenticated && protectedRoutes.includes(pathname)) {
 		const loginUrl = request.nextUrl.clone()
 
-		loginUrl.pathname = '/auth/login'
+		loginUrl.pathname = '/account/login'
 
 		return NextResponse.redirect(loginUrl)
 	}
@@ -38,6 +38,6 @@ export default function middleware(request: NextRequest) {
 	return NextResponse.next()
 }
 
-const config = {
-	matcher: ['/dashboard/:path*', '/auth/:path*'],
-}
+// const config = {
+// 	matcher: ['/dashboard/:path*', '/auth/:path*'],
+// }

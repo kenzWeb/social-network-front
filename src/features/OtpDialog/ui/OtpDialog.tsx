@@ -10,13 +10,14 @@ import {OtpInput} from '@/entities/OtpInput/'
 import {useOtpMutation} from '@/shared/api/hooks/useOtpMutation'
 import {Button} from '@/shared/components/ui/Button'
 import {useOtpStore} from '@/shared/hooks/'
+import {getTempEmail} from '@/shared/lib/cookies'
 import styles from './OtpDialog.module.css'
 
 export const OtpDialog = () => {
-	const {setOnOtpComplete, isOpen, otpCode, otpMaxLength, onOtpComplete} =
-		useOtpStore()
+	const {isOpen, otpCode, otpMaxLength} = useOtpStore()
 
 	const {mutate, isPending} = useOtpMutation()
+	const tempEmail = getTempEmail()
 
 	const isVerifyDisabled = (otpCode?.length || 0) < (otpMaxLength || 0)
 
@@ -32,11 +33,13 @@ export const OtpDialog = () => {
 						<div>
 							<OtpInput />
 							<Button
-								disabled={isVerifyDisabled}
+								disabled={isVerifyDisabled || isPending}
 								className={styles.button}
 								variant='yellow'
 								size='default'
-								// onClick={mutate(otpCode)}
+								onClick={() =>
+									tempEmail && mutate({email: tempEmail, code: otpCode})
+								}
 							>
 								Verify
 							</Button>

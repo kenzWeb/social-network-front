@@ -1,8 +1,9 @@
 import {IApiError} from '@/shared/interfaces/interface.api'
 
 import {registerSchema} from '@/features/AuthForm/components/RegisterForm/models'
+import {saveTempEmail} from '@/shared/lib/cookies'
 import {useDialogStore} from '@/shared/stores/dialogStore'
-import {RegisterRequest} from '@/shared/types/api'
+import {Register201, RegisterRequest} from '@/shared/types/api'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
 import {useForm} from 'react-hook-form'
@@ -11,7 +12,7 @@ import {register} from '../requests'
 
 export const useRegisterMutation = (
 	options?: Omit<
-		UseMutationOptions<void, unknown, RegisterRequest>,
+		UseMutationOptions<Register201, unknown, RegisterRequest>,
 		'mutationKey' | 'mutationFn'
 	>,
 ) => {
@@ -26,7 +27,7 @@ export const useRegisterMutation = (
 			first_name: '',
 			last_name: '',
 		} as RegisterRequest,
-		mode: 'onBlur',
+		mode: 'all',
 	})
 
 	const mutation = useMutation({
@@ -34,10 +35,12 @@ export const useRegisterMutation = (
 		mutationFn: (data: RegisterRequest) => register(data),
 		...options,
 		onSuccess: () => {
-			form.reset()
 			toast.success(
 				'Registration successful! Please check your email to verify your account.',
 			)
+			saveTempEmail(form.getValues().email)
+			form.reset()
+
 			open()
 		},
 		onError: (err: IApiError) => {

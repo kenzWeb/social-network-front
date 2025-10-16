@@ -17,7 +17,7 @@ export function RegisterForm() {
 	return (
 		<AuthWrapper heading={HEADING_REGISTER_FORM}>
 			<Form {...form}>
-				<form onSubmit={form.handleSubmit(onSubmit(mutate, form.getValues()))}>
+				<form onSubmit={form.handleSubmit(onSubmit(mutate))}>
 					<RegisterFields form={form} isPending={isPending} />
 					<AuthButtons
 						first='Sign Up'

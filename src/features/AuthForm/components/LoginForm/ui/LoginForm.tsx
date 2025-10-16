@@ -2,7 +2,7 @@
 
 import {AuthWrapper} from '@/entities/AuthWrapper'
 import {Form} from '@/shared/components/ui/Form'
-import {HEADING_REGISTER_FORM} from '@/shared/constants/base.constants'
+import {HEADING_LOGIN_FORM} from '@/shared/constants/base.constants'
 
 import {AuthButtons} from '@/entities/AuthButtons/'
 
@@ -14,9 +14,9 @@ export function LoginForm() {
 	const {mutate, isPending, form} = useLoginMutation()
 
 	return (
-		<AuthWrapper heading={HEADING_REGISTER_FORM}>
+		<AuthWrapper heading={HEADING_LOGIN_FORM}>
 			<Form {...form}>
-				<form onSubmit={form.handleSubmit(onSubmit(mutate, form.getValues()))}>
+				<form onSubmit={form.handleSubmit(onSubmit(mutate))}>
 					<LoginFields form={form} isPending={isPending} />
 					<AuthButtons
 						first='Sign In'

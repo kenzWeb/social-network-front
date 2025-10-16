@@ -19,3 +19,21 @@ export const removeToken = () => {
 		domain: process.env.NEXT_PUBLIC_DOMAIN,
 	})
 }
+
+export const getTempEmail = () => {
+	const tempEmail = Cookie.get('tempEmail')
+	return tempEmail ?? null
+}
+
+export const saveTempEmail = (email: string) => {
+	Cookie.set('tempEmail', email, {
+		domain: process.env.NEXT_PUBLIC_DOMAIN,
+		expires: 1,
+	})
+}
+
+export const removeTempEmail = () => {
+	Cookie.remove('tempEmail', {
+		domain: process.env.NEXT_PUBLIC_DOMAIN,
+	})
+}

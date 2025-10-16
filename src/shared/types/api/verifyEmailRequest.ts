@@ -7,6 +7,6 @@
  */
 
 export interface VerifyEmailRequest {
-  code: string;
-  email: string;
+	email: string
+	code: string
 }
