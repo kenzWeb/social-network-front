@@ -1,3 +1,10 @@
+import {RootContainer} from '@/widgets/RootContainer'
+import {RootHeader} from '@/widgets/RootHeader'
+
 export default function Home() {
-	return <h2></h2>
+	return (
+		<RootContainer>
+			<RootHeader />
+		</RootContainer>
+	)
 }
