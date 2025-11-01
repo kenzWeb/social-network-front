@@ -1,14 +1,14 @@
 'use client'
 
-import {AuthWrapper} from '@/entities/AuthWrapper'
-import {Form} from '@/shared/components/ui/Form'
-import {HEADING_LOGIN_FORM} from '@/shared/constants/base.constants'
+import { AuthWrapper } from '@/entities/AuthWrapper'
+import { Form } from '@/shared/components/ui/Form'
+import { HEADING_LOGIN_FORM } from '@/shared/constants/base.constants'
 
-import {AuthButtons} from '@/entities/AuthButtons/'
+import { AuthButtons } from '@/entities/AuthButtons/'
 
-import {LoginFields} from '@/entities/AuthFields/components/LoginFields'
-import {useLoginMutation} from '@/shared/api/hooks/useLoginMutation'
-import {onSubmit} from '@/shared/functions/onSubmit'
+import { LoginFields } from '@/entities/AuthFields/components/LoginFields'
+import { useLoginMutation } from '@/shared/api/hooks/useLoginMutation'
+import { onSubmit } from '@/shared/functions/onSubmit'
 
 export function LoginForm() {
 	const {mutate, isPending, form} = useLoginMutation()
