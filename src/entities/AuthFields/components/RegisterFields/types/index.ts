@@ -1,7 +1,7 @@
-import {RegisterFormValues} from '@/shared/models'
+import {RegisterRequest} from '@/shared/types/api'
 import {UseFormReturn} from 'react-hook-form'
 
 export interface RegisterFieldsProps {
-	form: UseFormReturn<RegisterFormValues, undefined>
+	form: UseFormReturn<RegisterRequest, undefined>
 	isPending?: boolean
 }
