@@ -1,3 +1,4 @@
+import {HeaderAvatar} from '@/features/HeaderAvatar'
 import {HeaderNav} from '@/features/HeaderNav'
 import {SearchHeader} from '@/features/SearchHeader'
 import Image from 'next/image'
@@ -11,7 +12,7 @@ export const RootHeader = () => {
 				<SearchHeader />
 			</div>
 			<HeaderNav />
-			<div className={styles.right}>test</div>
+			<HeaderAvatar />
 		</div>
 	)
 }

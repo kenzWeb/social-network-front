@@ -33,7 +33,7 @@ export const useLoginMutation = (
 		onSuccess: () => {
 			form.reset()
 			toast.success('Login successful! Welcome back.')
-			route.push('/dashboard')
+			route.push('/')
 		},
 		onError: (err: IApiError) => {
 			toast.error(err.response?.data.error || 'Login failed. Please try again.')

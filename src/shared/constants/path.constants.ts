@@ -7,6 +7,7 @@ export const uploads = {
 export const user = {
 	getAll: () => `${API_BASE}/user`,
 	getById: (id: string | number) => `${API_BASE}/user/${id}`,
+	getMe: () => `${API_BASE}/user/me`,
 	getByEmail: (email: string) => `${API_BASE}/user/by-email/${email}`,
 	create: () => `${API_BASE}/user`,
 	update: (id: string | number) => `${API_BASE}/user/${id}`,
