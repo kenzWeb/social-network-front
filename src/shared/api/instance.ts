@@ -38,8 +38,6 @@ instance.interceptors.response.use(
 			} catch (error) {
 				if (
 					errorCatch(error) === 'jwt expired' ||
-					errorCatch(error) === 'jwt must be provided' ||
-					errorCatch(error) === 'invalid token' ||
 					errorCatch(error) === 'Missing refresh token' ||
 					errorCatch(error) === 'Invalid refresh token'
 				) {
