@@ -30,7 +30,7 @@ export default function middleware(request: NextRequest) {
 	if (isAuthenticated && authRoutes.includes(pathname)) {
 		const dashUrl = request.nextUrl.clone()
 
-		dashUrl.pathname = '/dashboard'
+		dashUrl.pathname = '/'
 
 		return NextResponse.redirect(dashUrl)
 	}

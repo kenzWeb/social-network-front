@@ -5,20 +5,13 @@ import styles from './RootHeader.module.css'
 
 export const RootHeader = () => {
 	return (
-		<>
-			<div className={styles.wrapper}>
-				<div className={styles.left}>
-					<Image
-						src='/icons/header-icon.svg'
-						alt='Logo'
-						width={55}
-						height={55}
-					/>
-					<SearchHeader />
-				</div>
-				<HeaderNav />
-				<div className={styles.right}>test</div>
+		<div className={styles.wrapper}>
+			<div className={styles.left}>
+				<Image src='/icons/header-icon.svg' alt='Logo' width={55} height={55} />
+				<SearchHeader />
 			</div>
-		</>
+			<HeaderNav />
+			<div className={styles.right}>test</div>
+		</div>
 	)
 }
