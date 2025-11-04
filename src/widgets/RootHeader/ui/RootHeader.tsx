@@ -11,8 +11,12 @@ export const RootHeader = () => {
 				<Image src='/icons/header-icon.svg' alt='Logo' width={55} height={55} />
 				<SearchHeader />
 			</div>
-			<HeaderNav />
-			<HeaderAvatar />
+			<div className={styles.center}>
+				<HeaderNav />
+			</div>
+			<div className={styles.right}>
+				<HeaderAvatar />
+			</div>
 		</div>
 	)
 }

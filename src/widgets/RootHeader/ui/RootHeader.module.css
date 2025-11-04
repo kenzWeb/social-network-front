@@ -1,11 +1,24 @@
 .wrapper {
-	display: flex;
+	display: grid;
+	grid-template-columns: 1.5fr auto 1fr;
 	align-items: center;
-	justify-content: space-between;
+	gap: 20px;
 }
 
 .left {
 	display: flex;
 	align-items: center;
 	gap: 40px;
+}
+
+.center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.right {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
 }

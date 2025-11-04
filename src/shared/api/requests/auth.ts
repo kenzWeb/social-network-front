@@ -28,6 +28,6 @@ export const verifyEmail = async (data: VerifyEmailRequest) =>
 		.then((res) => res.data)
 
 export const refresh = async () =>
-	await api.get<RefreshToken200>(auth.refresh()).then((res) => {
+	await api.post<RefreshToken200>(auth.refresh()).then((res) => {
 		if (res.data.token) saveToken(res.data.token)
 	})
