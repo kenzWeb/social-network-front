@@ -1,2 +1,6 @@
 export * from './UserAvatar/'
+export * from './UserFollowStats'
+export * from './UserHandle'
+export * from './UserName'
+export * from './UserPreview'
 export * from './UserProfileCard'
