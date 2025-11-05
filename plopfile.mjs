@@ -82,18 +82,35 @@ export default function (plop) {
 			},
 		],
 		actions: (data) => {
-			let componentTemplate = 'plop-templates/component.tsx.hbs'
+			const name = plop.getHelper('pascalCase')(data.name)
+
+			// Шаблоны компонентов
+			let componentTemplate = ''
 			if (data.componentType === 'client') {
-				componentTemplate = 'plop-templates/component-client.tsx.hbs'
+				componentTemplate = `'use client'\n\nimport styles from './${name}.module.css'\n${
+					data.hasTypes ? `import { ${name}Props } from '../types'\n` : ''
+				}\nexport const ${name} = (${
+					data.hasTypes ? `props: ${name}Props` : ''
+				}) => {\n\treturn (\n\t\t<div className={styles.wrapper}>\n\t\t\t${name}\n\t\t</div>\n\t)\n}\n`
 			} else if (data.componentType === 'withState') {
-				componentTemplate = 'plop-templates/component-with-state.tsx.hbs'
+				componentTemplate = `'use client'\n\nimport { useState } from 'react'\nimport styles from './${name}.module.css'\n${
+					data.hasTypes ? `import { ${name}Props } from '../types'\n` : ''
+				}\nexport const ${name} = (${
+					data.hasTypes ? `props: ${name}Props` : ''
+				}) => {\n\tconst [state, setState] = useState()\n\n\treturn (\n\t\t<div className={styles.wrapper}>\n\t\t\t${name}\n\t\t</div>\n\t)\n}\n`
+			} else {
+				componentTemplate = `import styles from './${name}.module.css'\n${
+					data.hasTypes ? `import { ${name}Props } from '../types'\n` : ''
+				}\nexport const ${name} = (${
+					data.hasTypes ? `props: ${name}Props` : ''
+				}) => {\n\treturn (\n\t\t<div className={styles.wrapper}>\n\t\t\t${name}\n\t\t</div>\n\t)\n}\n`
 			}
 
 			const actions = [
 				{
 					type: 'add',
 					path: 'src/{{layer}}/{{pascalCase name}}/ui/{{pascalCase name}}.tsx',
-					templateFile: componentTemplate,
+					template: componentTemplate,
 				},
 
 				{
