@@ -1,3 +1,5 @@
+import styles from './UserProfileCard.module.css'
+
 export const UserProfileCard = () => {
-	return <div>UserProfileCard</div>
+	return <div className={styles.wrapper}></div>
 }

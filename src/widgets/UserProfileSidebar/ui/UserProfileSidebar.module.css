@@ -1,0 +1,10 @@
+.wrapper {
+	width: 24vw;
+	background-image: url('/icons/profile/arch.svg'),
+		linear-gradient(195deg, #1a1a1a 37%, #808080 100%);
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	padding-top: 120px;
+	border-radius: 15px;
+}

@@ -5,7 +5,9 @@ export default function Home() {
 	return (
 		<>
 			<RootHeader />
-			<UserProfileSidebar />
+			<main className='p-10'>
+				<UserProfileSidebar />
+			</main>
 		</>
 	)
 }

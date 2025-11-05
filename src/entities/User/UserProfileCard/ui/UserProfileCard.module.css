@@ -1,0 +1,6 @@
+.wrapper {
+	background: var(--foreground);
+	border-radius: 15px;
+	padding: 20px 25px 35px 25px;
+	color: white;
+}
