@@ -1,16 +1,17 @@
-'use client' import { useState } from 'react' import styles from './{{pascalCase
-	name
-}}.module.css'
+'use client'
+
+import { useState } from 'react'
+import styles from './{{pascalCase name}}.module.css'
 {{#if hasTypes}}
-	import {
-	{{pascalCase name}}Props } from '../types'
+import { {{pascalCase name}}Props } from '../types'
 {{/if}}
 
-export const
-{{pascalCase name}}
-= ({{#if hasTypes}}props: {{pascalCase name}}Props{{/if}}) => { const [state,
-setState] = useState() return (
-<div className='{styles.wrapper}'>
-	{{pascalCase name}}
-</div>
-) }
+export const {{pascalCase name}} = ({{#if hasTypes}}props: {{pascalCase name}}Props{{/if}}) => {
+	const [state, setState] = useState()
+
+	return (
+		<div className={{=<% %>=}}{styles.wrapper}<%={{ }}=%>>
+			{{pascalCase name}}
+		</div>
+	)
+}
