@@ -1,3 +1,4 @@
 export interface UserFollowStatsProps {
-	// Добавьте типы здесь
+	followers: number
+	followind: number
 }

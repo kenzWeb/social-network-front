@@ -1,10 +1,20 @@
+import {UserFollowStatsProps} from '../types'
 import styles from './UserFollowStats.module.css'
-import { UserFollowStatsProps } from '../types'
 
-export const UserFollowStats = (props: UserFollowStatsProps) => {
+export const UserFollowStats = ({
+	followers,
+	followind,
+}: UserFollowStatsProps) => {
 	return (
 		<div className={styles.wrapper}>
-			UserFollowStats
+			<div className={styles.item}>
+				<h2 className={styles.text}>{followers}</h2>
+				<h3 className={styles.title}>Followers</h3>
+			</div>
+			<div className={styles.item}>
+				<h2 className={styles.text}>{followind}</h2>
+				<h3 className={styles.title}>Following</h3>
+			</div>
 		</div>
 	)
 }

@@ -7,16 +7,18 @@
  */
 
 export interface User {
-  avatar_url?: string;
-  bio?: string;
-  created_at?: string;
-  email?: string;
-  first_name?: string;
-  id?: string;
-  is_2fa_enabled?: boolean;
-  is_active?: boolean;
-  is_verified?: boolean;
-  last_name?: string;
-  updated_at?: string;
-  username?: string;
+	avatar_url?: string
+	bio?: string
+	created_at?: string
+	email?: string
+	first_name?: string
+	id?: string
+	is_2fa_enabled?: boolean
+	followers_count?: number
+	following_count?: number
+	is_active?: boolean
+	is_verified?: boolean
+	last_name?: string
+	updated_at?: string
+	username?: string
 }
