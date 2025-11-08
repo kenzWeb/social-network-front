@@ -1,0 +1,10 @@
+.avatarWrapper {
+	position: absolute;
+	top: 37%;
+	left: calc(50% - 57.5px);
+}
+
+.avatar {
+	border-radius: 10px;
+	border: 8px solid var(--background);
+}

@@ -1,4 +1,4 @@
 export interface UserFollowStatsProps {
 	followers: number
-	followind: number
+	following: number
 }

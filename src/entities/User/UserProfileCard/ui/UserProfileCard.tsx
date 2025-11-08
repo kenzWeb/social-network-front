@@ -1,17 +1,25 @@
 'use client'
 
+import {UserAvatar, UserFollowStats} from '@/entities/User'
 import {useGetMeQuery} from '@/shared/api/hooks/useGetMeQuery'
-import {UserFollowStats} from '../../UserFollowStats'
+import {Spinner} from '@/shared/components/ui/Spinner'
 import styles from './UserProfileCard.module.css'
 
 export const UserProfileCard = () => {
-	const {data} = useGetMeQuery()
+	const {data, isLoading, isPending} = useGetMeQuery()
 	return (
 		<div className={styles.wrapper}>
-			<UserFollowStats
-				followers={data?.followers_count ?? 0}
-				followind={data?.following_count ?? 0}
-			/>
+			{isLoading || isPending ? (
+				<Spinner className='size-10 absolute' color='var(--primary)' />
+			) : (
+				<>
+					<UserFollowStats
+						followers={data?.followers_count ?? 0}
+						following={data?.following_count ?? 0}
+					/>
+					<UserAvatar img={data?.avatar_url ?? ''} />
+				</>
+			)}
 		</div>
 	)
 }
