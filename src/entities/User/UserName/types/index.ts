@@ -1,3 +1,4 @@
 export interface UserNameProps {
-	// Добавьте типы здесь
+	firstName: string
+	lastName: string
 }

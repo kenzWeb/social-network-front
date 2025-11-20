@@ -4,3 +4,7 @@
 	padding: 20px 25px 35px 25px;
 	color: white;
 }
+
+.avatarContainer {
+	position: relative;
+}

@@ -1,6 +1,5 @@
 .wrapper {
 	width: 24vw;
-	position: relative;
 	background-image: url('/icons/profile/arch.svg'),
 		linear-gradient(195deg, #1a1a1a 37%, #808080 100%);
 	background-position: top center;

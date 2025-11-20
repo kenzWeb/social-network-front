@@ -1,6 +1,6 @@
 .avatarWrapper {
 	position: absolute;
-	top: 37%;
+	top: -150%;
 	left: calc(50% - 57.5px);
 }
 

@@ -1,10 +1,10 @@
+import {UserNameProps} from '../types'
 import styles from './UserName.module.css'
-import { UserNameProps } from '../types'
 
-export const UserName = (props: UserNameProps) => {
+export const UserName = ({firstName, lastName}: UserNameProps) => {
 	return (
-		<div className={styles.wrapper}>
-			UserName
-		</div>
+		<h2 className={styles.text}>
+			{firstName} {lastName}
+		</h2>
 	)
 }

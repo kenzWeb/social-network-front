@@ -1,3 +1,3 @@
 export interface UserBioProps {
-	// Добавьте типы здесь
+	bio: string
 }

@@ -1,10 +1,13 @@
+import Image from 'next/image'
+import {UserBioProps} from '../types'
 import styles from './UserBio.module.css'
-import { UserBioProps } from '../types'
 
-export const UserBio = (props: UserBioProps) => {
+export const UserBio = ({bio}: UserBioProps) => {
 	return (
-		<div className={styles.wrapper}>
-			UserBio
-		</div>
+		<h2 className={styles.text}>
+			<Image width={24} height={24} src='/icons/profile/star-bio.svg' alt='' />{' '}
+			{bio}{' '}
+			<Image width={24} height={24} src='/icons/profile/star-bio.svg' alt='' />
+		</h2>
 	)
 }

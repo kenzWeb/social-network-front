@@ -1,0 +1,333 @@
+{
+    "files": {
+        "/Users/magomedsoltan/Desktop/code/проекты/modern-social-network/frontend/README.md": {
+            "lastCommittedState": "This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).\n\n## Getting Started\n\nFirst, run the development server:\n\n```bash\nnpm run dev\n# or\nyarn dev\n# or\npnpm dev\n# or\nbun dev\n```\n\nOpen [http://localhost:3000](http://localhost:3000) with your browser to see the result.\n\nYou can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.\n\nThis project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.\n\n## Learn More\n\nTo learn more about Next.js, take a look at the following resources:\n\n- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.\n- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.\n\nYou can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!\n\n## Deploy on Vercel\n\nThe easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.\n\nCheck out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.\n",
+            "maxStackSize": 50,
+            "redoStack": [],
+            "undoStack": [
+                {
+                    "cursor_after": 365,
+                    "cursor_before": 363,
+                    "inserted": "DK",
+                    "position": 363,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 363,
+                    "cursor_before": 365,
+                    "inserted": "",
+                    "position": 363,
+                    "removed": "DK"
+                },
+                {
+                    "cursor_after": 364,
+                    "cursor_before": 362,
+                    "inserted": "$+",
+                    "position": 362,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 366,
+                    "cursor_before": 364,
+                    "inserted": "$+",
+                    "position": 364,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 362,
+                    "cursor_before": 366,
+                    "inserted": "",
+                    "position": 362,
+                    "removed": "$+$+"
+                },
+                {
+                    "cursor_after": 363,
+                    "cursor_before": 362,
+                    "inserted": "$",
+                    "position": 362,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 366,
+                    "cursor_before": 363,
+                    "inserted": "+$+",
+                    "position": 363,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 368,
+                    "cursor_before": 366,
+                    "inserted": "$+",
+                    "position": 366,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 372,
+                    "cursor_before": 368,
+                    "inserted": "$+$+",
+                    "position": 368,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 376,
+                    "cursor_before": 372,
+                    "inserted": "DK2D",
+                    "position": 372,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 369,
+                    "cursor_before": 376,
+                    "inserted": "",
+                    "position": 369,
+                    "removed": "+$+DK2D"
+                },
+                {
+                    "cursor_after": 364,
+                    "cursor_before": 369,
+                    "inserted": "",
+                    "position": 364,
+                    "removed": "$+$+$"
+                },
+                {
+                    "cursor_after": 362,
+                    "cursor_before": 364,
+                    "inserted": "",
+                    "position": 362,
+                    "removed": "$+"
+                },
+                {
+                    "cursor_after": 365,
+                    "cursor_before": 362,
+                    "inserted": "AIB",
+                    "position": 362,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 365,
+                    "cursor_before": 365,
+                    "inserted": "",
+                    "position": 1453,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 364,
+                    "cursor_before": 365,
+                    "inserted": "K2",
+                    "position": 362,
+                    "removed": "AIB"
+                },
+                {
+                    "cursor_after": 362,
+                    "cursor_before": 364,
+                    "inserted": "",
+                    "position": 362,
+                    "removed": "K2"
+                },
+                {
+                    "cursor_after": 365,
+                    "cursor_before": 362,
+                    "inserted": "DK2",
+                    "position": 362,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 363,
+                    "cursor_before": 365,
+                    "inserted": "",
+                    "position": 363,
+                    "removed": "K2"
+                },
+                {
+                    "cursor_after": 362,
+                    "cursor_before": 363,
+                    "inserted": "",
+                    "position": 362,
+                    "removed": "D"
+                },
+                {
+                    "cursor_after": 274,
+                    "cursor_before": 271,
+                    "inserted": "KD2",
+                    "position": 271,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 272,
+                    "cursor_before": 274,
+                    "inserted": "",
+                    "position": 272,
+                    "removed": "D2"
+                },
+                {
+                    "cursor_after": 271,
+                    "cursor_before": 272,
+                    "inserted": "",
+                    "position": 271,
+                    "removed": "K"
+                },
+                {
+                    "cursor_after": 276,
+                    "cursor_before": 272,
+                    "inserted": "KD2K",
+                    "position": 272,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 272,
+                    "cursor_before": 276,
+                    "inserted": "",
+                    "position": 272,
+                    "removed": "KD2K"
+                }
+            ]
+        },
+        "/Users/magomedsoltan/Desktop/code/проекты/modern-social-network/frontend/src/shared/constants/api.constants.ts": {
+            "lastCommittedState": "import type {CreateAxiosDefaults} from 'axios'\n\nexport const API_OPTIONS: CreateAxiosDefaults = {\n\tbaseURL: process.env.NEXT_PUBLIC_API_URL,\n\theaders: {\n\t\t'Content-Type': 'application/json',\n\t},\n\twithCredentials: true,\n}\n\nexport enum EnumTokens {\n\tACCESS_TOKEN = 'accessToken',\n\tREFRESH_TOKEN = 'refreshToken',\n}",
+            "maxStackSize": 50,
+            "redoStack": [],
+            "undoStack": [
+                {
+                    "cursor_after": 314,
+                    "cursor_before": 313,
+                    "inserted": "\n",
+                    "position": 313,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 317,
+                    "cursor_before": 314,
+                    "inserted": "DK2",
+                    "position": 314,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 316,
+                    "cursor_before": 317,
+                    "inserted": "",
+                    "position": 316,
+                    "removed": "2"
+                },
+                {
+                    "cursor_after": 315,
+                    "cursor_before": 316,
+                    "inserted": "",
+                    "position": 315,
+                    "removed": "K"
+                },
+                {
+                    "cursor_after": 314,
+                    "cursor_before": 315,
+                    "inserted": "",
+                    "position": 314,
+                    "removed": "D"
+                },
+                {
+                    "cursor_after": 315,
+                    "cursor_before": 314,
+                    "inserted": "?",
+                    "position": 314,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 314,
+                    "cursor_before": 315,
+                    "inserted": "",
+                    "position": 314,
+                    "removed": "?"
+                },
+                {
+                    "cursor_after": 321,
+                    "cursor_before": 314,
+                    "inserted": "?OGA64;",
+                    "position": 314,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 317,
+                    "cursor_before": 321,
+                    "inserted": "asd",
+                    "position": 314,
+                    "removed": "?OGA64;"
+                },
+                {
+                    "cursor_after": 326,
+                    "cursor_before": 317,
+                    "inserted": ";laksdl;a",
+                    "position": 317,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 325,
+                    "cursor_before": 326,
+                    "inserted": "",
+                    "position": 325,
+                    "removed": "a"
+                },
+                {
+                    "cursor_after": 321,
+                    "cursor_before": 325,
+                    "inserted": "",
+                    "position": 321,
+                    "removed": "sdl;"
+                },
+                {
+                    "cursor_after": 315,
+                    "cursor_before": 321,
+                    "inserted": "",
+                    "position": 315,
+                    "removed": "sd;lak"
+                },
+                {
+                    "cursor_after": 331,
+                    "cursor_before": 315,
+                    "inserted": "slkdla;skdl;askd",
+                    "position": 315,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 371,
+                    "cursor_before": 331,
+                    "inserted": "asd;laksdldsadasdhaskjdhaksjdhakjshdkjas",
+                    "position": 331,
+                    "removed": ""
+                },
+                {
+                    "cursor_after": 370,
+                    "cursor_before": 371,
+                    "inserted": "",
+                    "position": 370,
+                    "removed": "s"
+                },
+                {
+                    "cursor_after": 368,
+                    "cursor_before": 370,
+                    "inserted": "",
+                    "position": 368,
+                    "removed": "ja"
+                },
+                {
+                    "cursor_after": 317,
+                    "cursor_before": 368,
+                    "inserted": "",
+                    "position": 317,
+                    "removed": "kdla;skdl;askdasd;laksdldsadasdhaskjdhaksjdhakjshdk"
+                },
+                {
+                    "cursor_after": 313,
+                    "cursor_before": 317,
+                    "inserted": "",
+                    "position": 313,
+                    "removed": "\nasl"
+                },
+                {
+                    "cursor_after": 312,
+                    "cursor_before": 313,
+                    "inserted": "",
+                    "position": 312,
+                    "removed": "\n"
+                }
+            ]
+        }
+    }
+}

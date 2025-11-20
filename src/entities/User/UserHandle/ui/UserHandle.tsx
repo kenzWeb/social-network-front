@@ -1,10 +1,10 @@
-import styles from './UserHandle.module.css'
 import { UserHandleProps } from '../types'
+import styles from './UserHandle.module.css'
 
-export const UserHandle = (props: UserHandleProps) => {
+export const UserHandle = ({username}: UserHandleProps) => {
 	return (
-		<div className={styles.wrapper}>
-			UserHandle
+		<div className={styles.text}>
+			@{username}
 		</div>
 	)
 }
