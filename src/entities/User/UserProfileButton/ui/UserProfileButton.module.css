@@ -1,0 +1,18 @@
+.button {
+	transition: all 0.3s ease;
+	background: linear-gradient(183deg, #282828 -28.66%, #8e8e8e 386.98%);
+	padding: 12px 0;
+	border-radius: 15px;
+	margin-top: 22px;
+}
+
+.button:hover {
+	opacity: 80%;
+}
+
+.title {
+	font-size: 16px;
+	font-weight: 200;
+	color: #ffffff;
+	opacity: 68%;
+}

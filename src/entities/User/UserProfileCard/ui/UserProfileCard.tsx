@@ -5,6 +5,7 @@ import {
 	UserFollowStats,
 	UserHandle,
 	UserName,
+	UserProfileButton,
 } from '@/entities/User'
 import {useGetMeQuery} from '@/shared/api/hooks/useGetMeQuery'
 import {Spinner} from '@/shared/components/ui/Spinner'
@@ -31,7 +32,10 @@ export const UserProfileCard = () => {
 						lastName={data?.last_name ?? 'NuN'}
 					/>
 					<UserHandle username={data?.username ?? 'NuN'} />
-					<UserBio bio={data?.bio ?? 'Not Bio'} />
+					<UserBio
+						bio={data?.bio ?? 'My name is Sultan, i am a software developer.'}
+					/>
+					<UserProfileButton />
 				</>
 			)}
 		</div>
