@@ -1,0 +1,13 @@
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	width: 100%;
+}
+
+.badge {
+	font-weight: 800;
+	font-size: 11px;
+	flex: 0 1 auto;
+	width: fit-content;
+}
