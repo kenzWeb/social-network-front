@@ -1,23 +1,30 @@
 'use client'
 
+import {Loader} from '@/entities/Loader'
 import {
 	UserAvatar,
+	UserBio,
 	UserFollowStats,
 	UserHandle,
 	UserName,
 	UserProfileButton,
 } from '@/entities/User'
 import {useGetMeQuery} from '@/shared/api/hooks/useGetMeQuery'
-import {Spinner} from '@/shared/components/ui/Spinner'
-import {UserBio} from '../../UserBio'
 import styles from './UserProfileCard.module.css'
 
 export const UserProfileCard = () => {
 	const {data, isLoading, isPending} = useGetMeQuery()
+	const loading = isLoading || isPending
+
 	return (
 		<div className={styles.wrapper}>
-			{isLoading || isPending ? (
-				<Spinner className='size-10 absolute' color='var(--primary)' />
+			{loading ? (
+				<Loader
+					className='size-10'
+					text='Loading profile data...'
+					isLoading={isLoading}
+					isPending={isPending}
+				/>
 			) : (
 				<>
 					<div className={styles.avatarContainer}>

@@ -1,11 +1,13 @@
-.wrapper {
-	margin-bottom: 28px;
-}
-
 .title {
 	color: white;
 	font-size: 16px;
 	font-weight: 800;
 	letter-spacing: -0.16px;
 	margin-bottom: 32px;
+}
+
+.list {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
 }

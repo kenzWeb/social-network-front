@@ -1,0 +1,35 @@
+.wrapper {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.avatar {
+	border-radius: 10px;
+	width: 33px;
+	height: 33px;
+}
+
+.info {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.name {
+	color: #fff;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.friendsCount {
+	color: var(--primary);
+	font-size: 12px;
+	font-weight: 500;
+	line-height: 102%;
+	letter-spacing: -0.1px;
+}
+
+.joinButton {
+}
