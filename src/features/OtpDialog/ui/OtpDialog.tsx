@@ -7,7 +7,7 @@ import {
 } from '@/shared/components/ui/Dialog'
 
 import {OtpInput} from '@/entities/OtpInput/'
-import {useOtpMutation} from '@/shared/api/hooks/useOtpMutation'
+import {useOtpMutation} from '@/shared/api/hooks/'
 import {Button} from '@/shared/components/ui/Button'
 import {useOtpStore} from '@/shared/hooks/'
 import {getTempEmail} from '@/shared/lib/cookies'

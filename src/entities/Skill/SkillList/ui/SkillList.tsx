@@ -1,6 +1,6 @@
 'use client'
 
-import {useGetSkills} from '@/shared/api/hooks/useGetSkills'
+import { useGetSkills } from '@/shared/api/hooks'
 import {SkillTag} from '../../SkillTag'
 import styles from './SkillList.module.css'
 

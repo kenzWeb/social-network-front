@@ -1,4 +1,5 @@
 import {RootHeader} from '@/widgets/RootHeader'
+import {StoriesCarousel} from '@/widgets/StoriesCarousel'
 import {UserProfileSidebar} from '@/widgets/UserProfileSidebar'
 
 export default function Home() {
@@ -7,6 +8,7 @@ export default function Home() {
 			<RootHeader />
 			<main className='p-10'>
 				<UserProfileSidebar />
+				<StoriesCarousel />
 			</main>
 		</>
 	)

@@ -1,9 +1,9 @@
-import {IApiError} from '@/shared/interfaces/interface.api'
-
 import {loginSchema} from '@/features/AuthForm/components/LoginForm/models'
+import {IApiError} from '@/shared/interfaces/interface.api'
 import {Login200OneOf, LoginRequest} from '@/shared/types/api'
 import {zodResolver} from '@hookform/resolvers/zod'
 import {useMutation, type UseMutationOptions} from '@tanstack/react-query'
+
 import {useRouter} from 'next/navigation'
 import {useForm} from 'react-hook-form'
 import {toast} from 'react-toastify'

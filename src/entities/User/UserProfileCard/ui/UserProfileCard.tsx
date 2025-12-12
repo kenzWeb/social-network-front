@@ -9,7 +9,8 @@ import {
 	UserName,
 	UserProfileButton,
 } from '@/entities/User'
-import {useGetMeQuery} from '@/shared/api/hooks/useGetMeQuery'
+
+import {useGetMeQuery} from '@/shared/api/hooks'
 import styles from './UserProfileCard.module.css'
 
 export const UserProfileCard = () => {
