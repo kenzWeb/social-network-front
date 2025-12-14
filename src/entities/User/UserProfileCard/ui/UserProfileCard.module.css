@@ -1,9 +1,12 @@
 .wrapper {
+	position: relative;
+	margin-top: -50px;
+	z-index: 5;
 	background: var(--foreground);
 	border-radius: 15px;
-	padding: 20px 25px 35px 25px;
 	color: white;
-	margin-bottom: 28px;
+	padding: 20px 25px 35px;
+	margin-bottom: 30px;
 }
 
 .avatarContainer {

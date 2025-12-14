@@ -1,10 +1,4 @@
 .wrapper {
-	width: 24vw;
-	background-image: url('/icons/profile/arch.svg');
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: 100%;
-	padding-top: 150px;
-	margin-right: 16px;
-	border-radius: 15px;
+  width: 24vw;
+  position: relative;
 }

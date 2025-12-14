@@ -6,6 +6,8 @@
  * OpenAPI spec version: 1.0.0
  */
 
+import {Story} from './story'
+
 export interface User {
 	avatar_url?: string
 	bio?: string
@@ -21,4 +23,5 @@ export interface User {
 	last_name?: string
 	updated_at?: string
 	username?: string
+	stories: Story[]
 }

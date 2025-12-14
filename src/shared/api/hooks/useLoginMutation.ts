@@ -1,3 +1,5 @@
+'use client'
+
 import {loginSchema} from '@/features/AuthForm/components/LoginForm/models'
 import {IApiError} from '@/shared/interfaces/interface.api'
 import {Login200OneOf, LoginRequest} from '@/shared/types/api'

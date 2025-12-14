@@ -3,7 +3,7 @@
 	grid-template-columns: 1.5fr auto 1fr;
 	align-items: center;
 	gap: 20px;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 .left {

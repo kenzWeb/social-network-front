@@ -8,9 +8,7 @@ export default defineConfig({
 		input: {
 			target: '../backend/openapi.json',
 			validation: false,
-			parserOptions: {
-				validate: false
-			}
+			filters: {},
 		},
 		output: {
 			schemas: './src/shared/types/api',
