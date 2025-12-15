@@ -1,3 +1,5 @@
 .wrapper {
-	/* Стили для UserStoryPreview */
+	display: flex;
+	justify-content: space-between;
+	cursor: pointer;
 }

@@ -1,3 +1,17 @@
+.avatar {
+	width: 62px;
+	height: 62px;
+	border-radius: 10px;
+	border: 1px solid var(--primary);
+}
+
 .wrapper {
-	/* Стили для UserStoryPreviewItem */
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+}
+
+.avatarImage {
+	border-radius: 10px;
+	padding: 5px;
 }

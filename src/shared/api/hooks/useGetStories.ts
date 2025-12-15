@@ -10,22 +10,17 @@ export function useGetStories(
 	>,
 ) {
 	const query = useQuery({
-		queryKey: ['get stories'],
+		queryKey: ['get-stories'],
 		queryFn: getStories,
 		...options,
 	})
 
-	const stories = useMemo(() => {
-		return query.data?.map((item) => item.stories ?? []).flat()
-	}, [query.data])
-
-	const userInfo = useMemo(() => {
+	const users = useMemo(() => {
 		return query.data ?? []
 	}, [query.data])
 
 	return {
 		...query,
-		stories,
-		userInfo,
+		users,
 	}
 }

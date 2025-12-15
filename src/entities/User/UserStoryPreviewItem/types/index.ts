@@ -1,13 +1,9 @@
-import type {
+import {
 	HandlersStoryResponse,
 	HandlersUserStoriesResponse,
 } from '@/shared/types/api'
 
-export type UserInfo = Omit<HandlersUserStoriesResponse, 'stories'>
-
-export type StoryItem = HandlersStoryResponse
-
 export interface UserStoryPreviewItemProps {
-	userInfo: UserInfo[]
-	stories: StoryItem[] | undefined
+	userInfo: HandlersUserStoriesResponse
+	stories: HandlersStoryResponse[] | undefined
 }

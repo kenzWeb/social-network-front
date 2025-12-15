@@ -11,6 +11,7 @@ import {
 } from '@/entities/User'
 
 import {useGetMeQuery} from '@/shared/api/hooks'
+import {getUploadUrl} from '@/shared/lib/uploads'
 import styles from './UserProfileCard.module.css'
 
 export const UserProfileCard = () => {
@@ -33,7 +34,7 @@ export const UserProfileCard = () => {
 							followers={data?.followers_count ?? 0}
 							following={data?.following_count ?? 0}
 						/>
-						<UserAvatar img={data?.avatar_url ?? ''} />
+						<UserAvatar img={getUploadUrl(data?.avatar_url) ?? ''} />
 					</div>
 					<UserName
 						firstName={data?.first_name ?? 'NuN'}

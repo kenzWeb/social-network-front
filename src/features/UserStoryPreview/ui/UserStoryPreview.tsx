@@ -1,13 +1,30 @@
+import {Loader} from '@/entities/Loader'
 import {UserStoryPreviewItem} from '@/entities/User'
 import {useGetStories} from '@/shared/api/hooks'
 import styles from './UserStoryPreview.module.css'
 
 export const UserStoryPreview = () => {
-	const {stories, userInfo} = useGetStories()
+	const {users, isLoading, isPending} = useGetStories()
 
 	return (
 		<div className={styles.wrapper}>
-			<UserStoryPreviewItem userInfo={userInfo} stories={stories} />
+			{isLoading && (
+				<Loader
+					className='size-10'
+					isPending={isPending}
+					isLoading={isLoading}
+				/>
+			)}
+
+			{users.map((user) =>
+				(user.stories?.length ?? 0) > 0 ? (
+					<UserStoryPreviewItem
+						key={user.id}
+						userInfo={user}
+						stories={user.stories ?? []}
+					/>
+				) : null,
+			)}
 		</div>
 	)
 }
