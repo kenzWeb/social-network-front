@@ -3,3 +3,11 @@
 	justify-content: space-between;
 	cursor: pointer;
 }
+
+.carouselContent {
+	gap: 50px;
+}
+
+.carouselItem {
+	flex-basis: auto;
+}
