@@ -26,6 +26,7 @@ export const UserStoryPreview = () => {
 				opts={{
 					align: 'start',
 					dragFree: true,
+					containScroll: false,
 				}}
 			>
 				<CarouselContent className={styles.carouselContent}>

@@ -1,13 +1,14 @@
 .wrapper {
 	display: flex;
 	justify-content: space-between;
-	cursor: pointer;
 }
 
 .carouselContent {
-	gap: 50px;
+	gap: 35px;
 }
 
 .carouselItem {
+	display: flex;
 	flex-basis: auto;
+	cursor: pointer;
 }

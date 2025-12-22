@@ -10,7 +10,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<UserProfileSidebar />
 				<StoriesCarousel />
-				<div className='w-[30vw]'>TEST</div>
+				<div>TEST</div>
 			</main>
 		</>
 	)
