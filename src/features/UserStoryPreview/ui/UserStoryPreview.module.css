@@ -3,12 +3,11 @@
 	justify-content: space-between;
 }
 
-.carouselContent {
-	gap: 35px;
+.swiper {
+	width: 100%;
 }
 
-.carouselItem {
-	display: flex;
-	flex-basis: auto;
+.slide {
+	width: auto;
 	cursor: pointer;
 }
