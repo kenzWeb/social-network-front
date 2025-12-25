@@ -6,9 +6,7 @@ import { useGetStories } from '@/shared/api/hooks'
 import { FreeMode, Navigation } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
-import 'swiper/css'
-import 'swiper/css/free-mode'
-import 'swiper/css/navigation'
+import 'swiper/swiper-bundle.css'
 
 import styles from './UserStoryPreview.module.css'
 
@@ -24,6 +22,7 @@ export const UserStoryPreview = () => {
 					isLoading={isLoading}
 				/>
 			)}
+			<button className={styles.prevButton} />
 			<Swiper
 				className={styles.swiper}
 				modules={[Navigation, FreeMode]}
@@ -34,7 +33,11 @@ export const UserStoryPreview = () => {
 					sticky: false,
 					momentumBounce: false
 				}}
-				navigation
+				navigation={{
+					prevEl: `.${styles.prevButton}`,
+					nextEl: `.${styles.nextButton}`,
+					disabledClass: styles.buttonDisabled
+				}}
 			>
 				{users.map(user =>
 					(user.stories?.length ?? 0) > 0 ? (
@@ -50,6 +53,7 @@ export const UserStoryPreview = () => {
 					) : null
 				)}
 			</Swiper>
+			<button className={styles.nextButton} />
 		</div>
 	)
 }

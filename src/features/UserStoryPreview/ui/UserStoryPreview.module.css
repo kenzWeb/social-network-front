@@ -1,5 +1,6 @@
 .wrapper {
 	display: flex;
+	position: relative;
 	justify-content: space-between;
 }
 
@@ -10,4 +11,35 @@
 .slide {
 	width: auto;
 	cursor: pointer;
+}
+
+.prevButton,
+.nextButton {
+	width: 25px;
+	height: 25px;
+	position: absolute;
+	z-index: 5;
+	flex-shrink: 0;
+	background-image: url('/icons/stories/stories-arrow.svg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.prevButton {
+	transform: rotate(180deg) translateY(-50%);
+	left: 10px;
+	bottom: 50%;
+}
+
+.nextButton {
+	top: 50%;
+	transform: translateY(-50%);
+	right: 25px;
+}
+
+.buttonDisabled {
+	display: none;
 }
