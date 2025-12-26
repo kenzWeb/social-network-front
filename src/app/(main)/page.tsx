@@ -1,6 +1,7 @@
-import {RootHeader} from '@/widgets/RootHeader'
-import {StoriesCarousel} from '@/widgets/StoriesCarousel'
-import {UserProfileSidebar} from '@/widgets/UserProfileSidebar'
+import { RecentActivitySidebar } from '@/widgets/RecentActivitySidebar'
+import { RootHeader } from '@/widgets/RootHeader'
+import { StoriesCarousel } from '@/widgets/StoriesCarousel'
+import { UserProfileSidebar } from '@/widgets/UserProfileSidebar'
 import styles from './page.module.css'
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
 			<main className={styles.main}>
 				<UserProfileSidebar />
 				<StoriesCarousel />
-				<div>TEST</div>
+				<RecentActivitySidebar />
 			</main>
 		</>
 	)
