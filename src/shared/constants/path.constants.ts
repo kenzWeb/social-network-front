@@ -1,7 +1,7 @@
 const API_BASE = '/api/v1'
 
 export const uploads = {
-	file: (filepath: string) => `/uploads/${filepath}`,
+	file: (filepath: string) => `/uploads/${filepath}`
 }
 
 export const user = {
@@ -15,7 +15,7 @@ export const user = {
 	getFollowers: (id: string | number) => `${API_BASE}/user/${id}/followers`,
 	getFollowing: (id: string | number) => `${API_BASE}/user/${id}/following`,
 	getFollowCounts: (id: string | number) =>
-		`${API_BASE}/user/${id}/follow-counts`,
+		`${API_BASE}/user/${id}/follow-counts`
 }
 
 export const auth = {
@@ -26,7 +26,7 @@ export const auth = {
 	resendVerifyEmail: () => `${API_BASE}/auth/resend-verify-email`,
 	verify2FA: () => `${API_BASE}/auth/2fa/verify`,
 	request2FA: () => `${API_BASE}/auth/2fa/request`,
-	toggle2FA: () => `${API_BASE}/auth/toggle-2fa`,
+	toggle2FA: () => `${API_BASE}/auth/toggle-2fa`
 }
 
 export const post = {
@@ -34,14 +34,14 @@ export const post = {
 	create: () => `${API_BASE}/post`,
 	update: (id: string | number) => `${API_BASE}/post/${id}`,
 	delete: (id: string | number) => `${API_BASE}/post/${id}`,
-	toggleLike: (id: string | number) => `${API_BASE}/post/${id}/like`,
+	toggleLike: (id: string | number) => `${API_BASE}/post/${id}/like`
 }
 
 export const comment = {
 	getByPost: (id: string | number) => `${API_BASE}/comment/post/${id}`,
 	getByUser: () => `${API_BASE}/comment/user/`,
 	getById: (id: string | number) => `${API_BASE}/comment/${id}`,
-	create: (postId: string | number) => `${API_BASE}/comment/post/${postId}`,
+	create: (postId: string | number) => `${API_BASE}/comment/post/${postId}`
 }
 
 export const story = {
@@ -52,19 +52,19 @@ export const story = {
 	update: (id: string | number) => `${API_BASE}/story/${id}`,
 	delete: (id: string | number) => `${API_BASE}/story/${id}`,
 	toggleLike: (id: string | number) => `${API_BASE}/story/${id}/like`,
-	getAllStories: () => `${API_BASE}/story/following`,
+	getAllStories: () => `${API_BASE}/story/following`
 }
 
 export const follow = {
 	toggle: (id: string | number) => `${API_BASE}/follow/${id}/toggle`,
 	follow: (id: string | number) => `${API_BASE}/follow/${id}`,
 	unfollow: (id: string | number) => `${API_BASE}/follow/${id}`,
-	getStatus: (id: string | number) => `${API_BASE}/follow/${id}/status`,
+	getStatus: (id: string | number) => `${API_BASE}/follow/${id}/status`
 }
 
 export const skill = {
 	getAll: () => `${API_BASE}/skill`,
-	add: () => `${API_BASE}/skill`,
+	add: () => `${API_BASE}/skill`
 }
 
 export const chat = {
@@ -77,5 +77,10 @@ export const chat = {
 	markRead: (id: string | number) =>
 		`${API_BASE}/chat/conversations/${id}/read`,
 	getPresence: (userId: string | number) =>
-		`${API_BASE}/chat/presence/${userId}`,
+		`${API_BASE}/chat/presence/${userId}`
+}
+
+export const notification = {
+	getAll: () => `${API_BASE}/notification`,
+	markAllRead: () => `${API_BASE}/notification/read-all`
 }
