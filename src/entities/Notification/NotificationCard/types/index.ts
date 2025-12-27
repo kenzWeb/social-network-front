@@ -1,3 +1,0 @@
-export interface NotificationCardProps {
-	// Добавьте типы здесь
-}

@@ -1,4 +1,4 @@
-import { NotificationCard } from '@/entities/Notification'
+import { NotificationCard } from '@/features/NotificationCard'
 import styles from './RecentActivitySidebar.module.css'
 
 export const RecentActivitySidebar = () => {

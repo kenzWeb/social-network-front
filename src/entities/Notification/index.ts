@@ -1,1 +1,1 @@
-export * from './NotificationCard'
+export * from './NotificationCardItem'
