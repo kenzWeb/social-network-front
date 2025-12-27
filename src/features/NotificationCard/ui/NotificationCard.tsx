@@ -1,5 +1,6 @@
 'use client'
 
+import { NotificationCardItem } from '@/entities/Notification'
 import { useGetAllNotification } from '@/shared/api/hooks/useGetAllNotification'
 import styles from './NotificationCard.module.css'
 
@@ -9,12 +10,12 @@ export const NotificationCard = () => {
 
 	return (
 		<div className={styles.wrapper}>
-			{/* {notifications?.map(notification => (
+			{notifications?.map(notification => (
 				<NotificationCardItem
 					key={notification.id}
 					notification={notification}
 				/>
-			))} */}
+			))}
 		</div>
 	)
 }

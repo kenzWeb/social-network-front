@@ -1,11 +1,10 @@
 import { InternalHandlersNotificationListResponse } from '@/shared/types/api'
 import { useQuery, UseQueryOptions } from '@tanstack/react-query'
-import { useMemo } from 'react'
 import { getAllNotifications } from '../requests/notification'
 
 export function useGetAllNotification(
 	options?: Omit<
-		UseQueryOptions<InternalHandlersNotificationListResponse[], unknown>,
+		UseQueryOptions<InternalHandlersNotificationListResponse, unknown>,
 		'queryKey' | 'queryFn'
 	>
 ) {
@@ -15,7 +14,7 @@ export function useGetAllNotification(
 		...options
 	})
 
-	const notifications = useMemo(() => data.data ?? [], [data.data])
+	const notifications = data.data?.notifications?.map(item => item)
 
 	return { data, notifications }
 }

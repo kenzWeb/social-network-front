@@ -5,13 +5,19 @@
  * API for Modern Social Network
  * OpenAPI spec version: 1.0
  */
-import type { InternalHandlersActorInfo } from './internalHandlersActorInfo';
+import type { InternalHandlersActorInfo } from './internalHandlersActorInfo'
+
+export enum InternalHandlersNotificationResponseType {
+	FOLLOW = 'follow',
+	LIKE = 'like',
+	COMMENT = 'comment'
+}
 
 export interface InternalHandlersNotificationResponse {
-  actor?: InternalHandlersActorInfo;
-  created_at?: string;
-  id?: string;
-  read?: boolean;
-  target_id?: string;
-  type?: string;
+	actor?: InternalHandlersActorInfo
+	created_at?: string
+	id?: string
+	read?: boolean
+	target_id?: string
+	type?: InternalHandlersNotificationResponseType
 }
