@@ -1,10 +1,20 @@
-import styles from './NotificationCard.module.css'
-import { NotificationCardProps } from '../types'
+'use client'
 
-export const NotificationCard = (props: NotificationCardProps) => {
+import { useGetAllNotification } from '@/shared/api/hooks/useGetAllNotification'
+import styles from './NotificationCard.module.css'
+
+export const NotificationCard = () => {
+	const { notifications } = useGetAllNotification()
+	console.log(notifications)
+
 	return (
 		<div className={styles.wrapper}>
-			NotificationCard
+			{/* {notifications?.map(notification => (
+				<NotificationCardItem
+					key={notification.id}
+					notification={notification}
+				/>
+			))} */}
 		</div>
 	)
 }

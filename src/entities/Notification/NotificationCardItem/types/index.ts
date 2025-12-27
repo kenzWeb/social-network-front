@@ -1,3 +1,5 @@
+import { InternalHandlersNotificationListResponse } from '@/shared/types/api'
+
 export interface NotificationCardItemProps {
-	// Добавьте типы здесь
+	notification: InternalHandlersNotificationListResponse
 }

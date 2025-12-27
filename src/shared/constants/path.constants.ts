@@ -81,6 +81,6 @@ export const chat = {
 }
 
 export const notification = {
-	getAll: () => `${API_BASE}/notification`,
-	markAllRead: () => `${API_BASE}/notification/read-all`
+	getAll: () => `${API_BASE}/notifications`,
+	markAllRead: () => `${API_BASE}/notifications/read-all`
 }
