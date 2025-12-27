@@ -1,3 +1,64 @@
 .wrapper {
-	/* Стили для NotificationCardItem */
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+	background: rgba(26, 26, 26, 0.72);
+	border-radius: 12px;
+	padding: 18px 25px 12px 25px;
+}
+
+.avatarImage {
+	border-radius: 10px;
+}
+
+.actor {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.actorInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+}
+
+.actorName {
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+	font-weight: 400;
+}
+
+.notificationInfo {
+	display: flex;
+	align-items: center;
+	font-size: 13px;
+}
+
+.action {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+.timeAgo {
+	color: var(--primary);
+}
+
+.buttons {
+	display: flex;
+	background-color: #1a1a1a;
+	border-radius: 15px;
+	padding: 5px 4px;
+	gap: 10px;
+	font-weight: 900;
+}
+
+.dismissButton {
+	font-size: 10px;
+	color: white;
+	background-color: transparent;
+}
+
+.followButton {
+	font-size: 7px;
 }

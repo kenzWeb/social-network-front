@@ -1,8 +1,8 @@
-import {Slot} from '@radix-ui/react-slot'
-import {cva, type VariantProps} from 'class-variance-authority'
+import { Slot } from '@radix-ui/react-slot'
+import { cva, type VariantProps } from 'class-variance-authority'
 import * as React from 'react'
 
-import {cn} from '@/shared/lib/utils'
+import { cn } from '@/shared/lib/utils'
 
 const buttonVariants = cva(
 	"inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
@@ -22,20 +22,20 @@ const buttonVariants = cva(
 				link: 'text-primary underline-offset-4 hover:underline cursor-pointer',
 				black: 'text-white bg-black hover:bg-foreground cursor-pointer',
 				gray: 'text-white bg-black/60 hover:bg-black cursor-pointer',
-				yellow: 'text-black/87 bg-primary hover:bg-yellow-300 cursor-pointer',
+				yellow: 'text-black/87 bg-primary hover:bg-yellow-300 cursor-pointer'
 			},
 			size: {
 				default: 'px-[25px] py-[8px] text-[16px]',
 				large: 'w-full px-[10px] py-[5px] text-[32px]',
 				medium: 'px-[90px] py-[12px] text-[16px]',
-				small: 'px-[33px] py-[1px] text-[7px]',
-			},
+				small: 'px-[33px] py-[1px] text-[7px]'
+			}
 		},
 		defaultVariants: {
 			variant: 'default',
-			size: 'default',
-		},
-	},
+			size: 'default'
+		}
+	}
 )
 
 function Button({
@@ -52,11 +52,11 @@ function Button({
 
 	return (
 		<Comp
-			data-slot='button'
-			className={cn(buttonVariants({variant, size, className}))}
+			data-slot="button"
+			className={cn(buttonVariants({ variant, size, className }))}
 			{...props}
 		/>
 	)
 }
 
-export {Button, buttonVariants}
+export { Button, buttonVariants }
