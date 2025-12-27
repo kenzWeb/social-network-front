@@ -7,7 +7,7 @@
  */
 import type { InternalHandlersActorInfo } from './internalHandlersActorInfo'
 
-export enum InternalHandlersNotificationResponseType {
+export enum NotificationTypeEnum {
 	FOLLOW = 'follow',
 	LIKE = 'like',
 	COMMENT = 'comment'
@@ -19,5 +19,5 @@ export interface InternalHandlersNotificationResponse {
 	id?: string
 	read?: boolean
 	target_id?: string
-	type?: InternalHandlersNotificationResponseType
+	type?: NotificationTypeEnum
 }
