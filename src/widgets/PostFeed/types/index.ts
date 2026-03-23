@@ -1,0 +1,1 @@
+export interface PostFeedProps { // Добавьте типы здесь }
