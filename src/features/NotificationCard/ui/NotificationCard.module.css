@@ -1,1 +1,6 @@
-.wrapper { /* Стили для NotificationCard */ }
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 35px;
+}
+

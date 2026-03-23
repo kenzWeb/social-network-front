@@ -1,7 +1,7 @@
 .wrapper {
 	display: flex;
 	flex-direction: column;
-	gap: 35px;
+	gap: 20px;
 	background: rgba(26, 26, 26, 0.72);
 	border-radius: 12px;
 	padding: 18px 25px 12px 25px;
@@ -25,15 +25,18 @@
 
 .actorName {
 	font-size: 16px;
+	line-height: 102%;
+	letter-spacing: -1%;
 	font-weight: 600;
 	color: white;
-	font-weight: 400;
+	font-weight: 500;
 }
 
 .notificationInfo {
 	display: flex;
 	align-items: center;
 	font-size: 13px;
+	white-space: nowrap;
 }
 
 .action {
@@ -54,6 +57,7 @@
 	margin-left: auto;
 	width: 100%;
 	text-align: center;
+	align-items: center;
 }
 
 .dismissButton {
@@ -64,4 +68,6 @@
 
 .followButton {
 	font-size: 7px;
+	width: 40%;
+	height: 12px;
 }
