@@ -3,6 +3,8 @@
 	background-color: var(--color-foreground);
 	padding: 23px 18px 53px 18px;
 	border-radius: 15px;
+	height: 100vh;
+	overflow-y: auto;
 }
 
 .title {
