@@ -1,1 +1,3 @@
-export interface PostFeedProps { // Добавьте типы здесь }
+export interface PostFeedProps {
+	
+}

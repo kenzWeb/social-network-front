@@ -42,7 +42,7 @@ export const UserProfileCard = () => {
 					/>
 					<UserHandle username={data?.username ?? 'NuN'} />
 					<UserBio
-						bio={data?.bio ?? 'My name is Sultan, i am a software developer.'}
+						bio={data?.bio ?? '....'}
 					/>
 					<UserProfileButton />
 				</>
