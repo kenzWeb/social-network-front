@@ -1,0 +1,1 @@
+export { PostCardUserInfo } from './PostCardUserInfo'

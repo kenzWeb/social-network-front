@@ -1,2 +1,6 @@
 export * from './PostCard'
 export * from './CreatePostForm'
+export * from './PostCardUserInfo'
+export * from './PostCardContent'
+export * from './PostCardAddComment'
+export * from './PostCardInteractions'
