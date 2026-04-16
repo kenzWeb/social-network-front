@@ -7,7 +7,6 @@ export const CommunityItem = (props: CommunityItemProps) => {
 	return (
 		<div className={styles.wrapper}>
 			<Avatar className={styles.avatar}>
-				ё
 				<AvatarImage src={getUploadUrl(props.avatar)} />
 			</Avatar>
 			<div className={styles.info}>

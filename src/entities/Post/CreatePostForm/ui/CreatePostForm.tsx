@@ -8,12 +8,13 @@ import styles from './CreatePostForm.module.css'
 
 export const CreatePostForm = (props: CreatePostFormProps) => {
 	const { data } = useGetMeQuery()
+	console.log(data)
 	return (
 		<div className={styles.wrapper}>
 			<Avatar className={styles.avatar}>
-				<AvatarImage src={getUploadUrl(data?.avatar_url)} />
+				<AvatarImage className={styles.avatarImg} src={getUploadUrl(data?.avatar_url)} />
 			</Avatar>
-			<Input />
+			<Input className={styles.input} placeholder="Tell your friends about your thoughts.." />
 		</div>
 	)
 }

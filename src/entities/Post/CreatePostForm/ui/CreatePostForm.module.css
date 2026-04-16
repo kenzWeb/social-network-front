@@ -1,3 +1,29 @@
 .wrapper {
-	/* Стили для CreatePostForm */
+	background-color: var(--foreground);
+	margin-top: 55px;
+	padding: 30px 40px;
+	border-radius: 15px;
+	gap: 18px;
+	display: flex;
+}
+
+.input {
+	background-color: var(--background);
+	border: none;
+	border-radius: 10px;
+}
+
+.input::placeholder {
+	color: rgba(255, 255, 255, 0.5);
+	font-size: 16px;
+}
+
+.avatar {
+	background-color: var(--background);
+	padding: 2px;
+	border-radius: 3.06px;
+}
+
+.avatarImg {
+	border-radius: 3.06px;
 }
