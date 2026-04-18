@@ -1,3 +1,3 @@
 export interface UserAvatarProps {
-	img: string
+	img: string | undefined
 }
