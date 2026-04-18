@@ -1,3 +1,5 @@
 .wrapper {
-	/* Стили для PostCard */
+	background-color: var(--foreground);
+	border-radius: 15px;
+	padding: 33px 47px;
 }

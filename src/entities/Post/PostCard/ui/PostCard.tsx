@@ -1,10 +1,11 @@
-import styles from './PostCard.module.css'
+import { PostCardUserInfo } from '../../PostCardUserInfo'
 import { PostCardProps } from '../types'
+import styles from './PostCard.module.css'
 
 export const PostCard = (props: PostCardProps) => {
 	return (
 		<div className={styles.wrapper}>
-			PostCard
+			<PostCardUserInfo />
 		</div>
 	)
 }
