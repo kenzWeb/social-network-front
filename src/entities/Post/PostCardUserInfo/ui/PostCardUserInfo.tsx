@@ -10,10 +10,20 @@ export const PostCardUserInfo = (props: PostCardUserInfoProps) => {
 		<>
 			<div className={styles.left}>
 				<Loader isLoading={isLoading} isPending={isPending} type="children">
-					<UserAvatar img={data?.avatar_url} AvatarClass={styles.}/>
+					<UserAvatar
+						img={data?.avatar_url}
+						AvatarClass={styles.avatar}
+						AvatarImgClass={styles.avatarImg}
+					/>
 				</Loader>
+				<h2 className={styles.name}>{data?.first_name}</h2>
 			</div>
-			<div className={styles.right}></div>
+			<div className={styles.right}>
+				<h2 className={styles.username}>@{data?.username}</h2>
+				<h2 className={styles.fullname}>
+					{data?.first_name} {data?.last_name}
+				</h2>
+			</div>
 		</>
 	)
 }
