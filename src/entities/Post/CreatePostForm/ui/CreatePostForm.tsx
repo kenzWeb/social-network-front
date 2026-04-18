@@ -8,7 +8,11 @@ export const CreatePostForm = (props: CreatePostFormProps) => {
 	const { data } = useGetMeQuery()
 	return (
 		<div className={styles.wrapper}>
-			<UserAvatar img={data?.avatar_url} />
+			<UserAvatar
+				img={data?.avatar_url}
+				AvatarImgClass={styles.avatarImg}
+				AvatarClass={styles.avatar}
+			/>
 			<Input className={styles.input} placeholder="Tell your friends about your thoughts.." />
 		</div>
 	)

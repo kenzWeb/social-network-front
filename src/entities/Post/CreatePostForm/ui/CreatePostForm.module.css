@@ -5,6 +5,7 @@
 	border-radius: 15px;
 	gap: 18px;
 	display: flex;
+	margin-bottom: 30px;
 }
 
 .input {
@@ -22,6 +23,8 @@
 	background-color: var(--background);
 	padding: 2px;
 	border-radius: 3.06px;
+	width: 35px;
+	height: 35px;
 }
 
 .avatarImg {

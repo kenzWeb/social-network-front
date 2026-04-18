@@ -5,7 +5,7 @@ import styles from './CommunityItem.module.css'
 export const CommunityItem = (props: CommunityItemProps) => {
 	return (
 		<div className={styles.wrapper}>
-			<UserAvatar img={props.avatar} />
+			<UserAvatar img={props.avatar} AvatarClass={styles.avatar} />
 			<div className={styles.info}>
 				<h3 className={styles.name}>{props.name}</h3>
 				<p className={styles.friendsCount}>{props.myFriendsCount} your friends are in</p>
