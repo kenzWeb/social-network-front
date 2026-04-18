@@ -8,9 +8,7 @@ import { notificationActionText } from '../model'
 import { NotificationCardItemProps } from '../types'
 import styles from './NotificationCardItem.module.css'
 
-export const NotificationCardItem = ({
-	notification
-}: NotificationCardItemProps) => {
+export const NotificationCardItem = ({ notification }: NotificationCardItemProps) => {
 	const { timeAgo } = useTimeAgo(notification.created_at || '')
 
 	return (
@@ -29,11 +27,9 @@ export const NotificationCardItem = ({
 					<h2 className={styles.actorName}>{notification.actor?.first_name}</h2>
 					<div className={styles.notificationInfo}>
 						<h3 className={styles.action}>
-							{notification.type
-								? notificationActionText[notification.type]
-								: ''}
+							{notification.type ? notificationActionText[notification.type] : ''}
 						</h3>
-						<p className={styles.timeAgo}>{` . ${timeAgo}`}</p>
+						{timeAgo && <p className={styles.timeAgo}>{` . ${timeAgo}`}</p>}
 					</div>
 				</div>
 			</div>
@@ -43,9 +39,7 @@ export const NotificationCardItem = ({
 					size="small"
 					className={cn(
 						styles.dismissButton,
-						notification.type === NotificationTypeEnum.FOLLOW
-							? 'w-[60%]'
-							: 'w-full'
+						notification.type === NotificationTypeEnum.FOLLOW ? 'w-[60%]' : 'w-full'
 					)}
 				>
 					Remove
