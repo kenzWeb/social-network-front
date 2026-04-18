@@ -1,17 +1,19 @@
-import { UserAvatar } from '@/entities/User'
+import { Loader } from '@/entities/Loader'
 import { useGetMeQuery } from '@/shared/api/hooks'
-import { getUploadUrl } from '@/shared/lib/uploads'
+import { UserAvatar } from '@/shared/components/UserAvatar'
 import { PostCardUserInfoProps } from '../types'
 import styles from './PostCardUserInfo.module.css'
 
 export const PostCardUserInfo = (props: PostCardUserInfoProps) => {
 	const { data, isLoading, isPending } = useGetMeQuery()
 	return (
-		<div className={styles.wrapper}>
+		<>
 			<div className={styles.left}>
-				<UserAvatar img={getUploadUrl(data?.avatar_url)} />
+				<Loader isLoading={isLoading} isPending={isPending} type="children">
+					<UserAvatar img={data?.avatar_url} AvatarClass={styles.}/>
+				</Loader>
 			</div>
 			<div className={styles.right}></div>
-		</div>
+		</>
 	)
 }
