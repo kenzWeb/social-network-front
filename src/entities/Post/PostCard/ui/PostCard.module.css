@@ -1,6 +1,9 @@
 .wrapper {
 	display: flex;
-	gap: 10px;
+	overflow-y: auto;
+	flex-direction: column;
+	gap: 20px;
+	align-items: start;
 	background-color: var(--foreground);
 	border-radius: 15px;
 	padding: 33px 47px;

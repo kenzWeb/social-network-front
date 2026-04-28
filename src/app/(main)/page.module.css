@@ -2,6 +2,15 @@
 	padding-inline: 25px;
 	gap: 14px;
 	display: flex;
+	height: calc(100vh - 90px); /* Вычитаем приблизительную высоту хедера */
+}
 
+.main > * {
+	height: 100%;
+	overflow-y: auto;
+	scrollbar-width: none;
+}
 
+.main > *::-webkit-scrollbar {
+	display: none;
 }

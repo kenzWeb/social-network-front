@@ -5,7 +5,7 @@ import styles from './PostCardContent.module.css'
 
 export const PostCardContent = (props: PostCardContentProps) => {
 	const post = props.post
-	console.log(post)
+
 	return (
 		<div className={styles.wrapper}>
 			<h2 className={styles.description}>{post.content}</h2>

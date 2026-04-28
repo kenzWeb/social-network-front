@@ -1,3 +1,15 @@
 .wrapper {
-	/* Стили для PostCardContent */
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.description {
+	color: #fff;
+	font-size: 13px;
+	font-weight: 300;
+}
+
+.image {
+	border-radius: 15px;
 }
