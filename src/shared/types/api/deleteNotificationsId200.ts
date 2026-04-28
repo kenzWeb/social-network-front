@@ -6,4 +6,4 @@
  * OpenAPI spec version: 1.0
  */
 
-export type DeleteNotificationsId200 = { [key: string]: string }
+export type DeleteNotificationsId200 = {[key: string]: string};

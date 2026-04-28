@@ -4,9 +4,6 @@
 	align-items: center;
 }
 
-.right {
-}
-
 .avatar {
 	background-color: var(--background);
 	width: 60px;

@@ -6,9 +6,9 @@
  * OpenAPI spec version: 1.0
  */
 
-export interface HandlersStoryResponse {
-  created_at?: string;
-  id?: string;
-  media_type?: string;
-  media_url?: string;
-}
+export type PostPostsBody = {
+  /** Post content */
+  content: string;
+  /** Post image */
+  image?: Blob;
+};

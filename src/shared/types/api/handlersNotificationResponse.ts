@@ -5,10 +5,13 @@
  * API for Modern Social Network
  * OpenAPI spec version: 1.0
  */
+import type { HandlersActorInfo } from './handlersActorInfo';
 
-export interface HandlersStoryResponse {
+export interface HandlersNotificationResponse {
+  actor?: HandlersActorInfo;
   created_at?: string;
   id?: string;
-  media_type?: string;
-  media_url?: string;
+  read?: boolean;
+  target_id?: string;
+  type?: string;
 }

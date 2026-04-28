@@ -1,17 +1,17 @@
 import * as dotenv from 'dotenv'
-import {defineConfig} from 'orval'
+import { defineConfig } from 'orval'
 
 dotenv.config()
 
 export default defineConfig({
 	client: {
 		input: {
-			target: '../backend/openapi.json',
+			target: '../social-network-back/docs/swagger.json',
 			validation: false,
-			filters: {},
+			filters: {}
 		},
 		output: {
-			schemas: './src/shared/types/api',
-		},
-	},
+			schemas: './src/shared/types/api'
+		}
+	}
 })

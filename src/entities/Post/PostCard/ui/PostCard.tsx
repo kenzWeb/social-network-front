@@ -1,10 +1,9 @@
 import { useGetPosts } from '@/shared/api/hooks'
 import { PostCardContent } from '../../PostCardContent'
 import { PostCardUserInfo } from '../../PostCardUserInfo'
-import { PostCardProps } from '../types'
 import styles from './PostCard.module.css'
 
-export const PostCard = (props: PostCardProps) => {
+export const PostCard = () => {
 	const { data, isLoading, isPending } = useGetPosts()
 	return (
 		<>
@@ -17,7 +16,7 @@ export const PostCard = (props: PostCardProps) => {
 							isLoading={isLoading}
 							isPending={isPending}
 						/>
-						<PostCardContent />
+						<PostCardContent post={post} />
 					</div>
 				))}
 		</>

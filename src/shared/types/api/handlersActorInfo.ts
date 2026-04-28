@@ -6,9 +6,11 @@
  * OpenAPI spec version: 1.0
  */
 
-export interface HandlersStoryResponse {
-  created_at?: string;
+export interface HandlersActorInfo {
+  avatar_url?: string;
+  first_name?: string;
   id?: string;
-  media_type?: string;
-  media_url?: string;
+  is_verified?: boolean;
+  last_name?: string;
+  username?: string;
 }
