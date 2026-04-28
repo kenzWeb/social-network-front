@@ -14,8 +14,7 @@ export const user = {
 	delete: (id: string | number) => `${API_BASE}/user/${id}`,
 	getFollowers: (id: string | number) => `${API_BASE}/user/${id}/followers`,
 	getFollowing: (id: string | number) => `${API_BASE}/user/${id}/following`,
-	getFollowCounts: (id: string | number) =>
-		`${API_BASE}/user/${id}/follow-counts`
+	getFollowCounts: (id: string | number) => `${API_BASE}/user/${id}/follow-counts`
 }
 
 export const auth = {
@@ -31,6 +30,7 @@ export const auth = {
 
 export const post = {
 	getByUser: () => `${API_BASE}/post`,
+	getAll: () => `${API_BASE}/post/all`,
 	create: () => `${API_BASE}/post`,
 	update: (id: string | number) => `${API_BASE}/post/${id}`,
 	delete: (id: string | number) => `${API_BASE}/post/${id}`,
@@ -70,14 +70,10 @@ export const skill = {
 export const chat = {
 	ws: () => `${API_BASE}/ws`,
 	getConversations: () => `${API_BASE}/chat/conversations`,
-	getMessages: (id: string | number) =>
-		`${API_BASE}/chat/conversations/${id}/messages`,
-	sendDirect: (userId: string | number) =>
-		`${API_BASE}/chat/direct/${userId}/send`,
-	markRead: (id: string | number) =>
-		`${API_BASE}/chat/conversations/${id}/read`,
-	getPresence: (userId: string | number) =>
-		`${API_BASE}/chat/presence/${userId}`
+	getMessages: (id: string | number) => `${API_BASE}/chat/conversations/${id}/messages`,
+	sendDirect: (userId: string | number) => `${API_BASE}/chat/direct/${userId}/send`,
+	markRead: (id: string | number) => `${API_BASE}/chat/conversations/${id}/read`,
+	getPresence: (userId: string | number) => `${API_BASE}/chat/presence/${userId}`
 }
 
 export const notification = {

@@ -1,4 +1,5 @@
 export * from './useGetMeQuery'
+export * from './useGetPosts'
 export * from './useGetSkills'
 export * from './useGetStories'
 export * from './useLoginMutation'
