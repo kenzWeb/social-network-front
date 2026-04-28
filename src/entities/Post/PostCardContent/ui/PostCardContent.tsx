@@ -4,7 +4,7 @@ import { PostCardContentProps } from '../types'
 export const PostCardContent = (props: PostCardContentProps) => {
 	return (
 		<div className={styles.wrapper}>
-			PostCardContent
+			<div className={styles.bio}></div>
 		</div>
 	)
 }
